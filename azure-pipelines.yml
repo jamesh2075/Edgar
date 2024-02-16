@@ -83,6 +83,3 @@ stages:
               appType: 'webApp'
               WebAppName: 'EdgarApi'
               packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
-
-
-appendCommitMessageToRunName:
