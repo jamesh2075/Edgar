@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularsample5.client": {
+    "EdgarClient": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Soltech.Samples.Fora.EdgarClient:build:production"
+              "buildTarget": "EdgarClient:build:production"
             },
             "development": {
-              "buildTarget": "Soltech.Samples.Fora.EdgarClient:build:development"
+              "buildTarget": "EdgarClient:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Soltech.Samples.Fora.EdgarClient:build"
+            "buildTarget": "EdgarClient:build"
           }
         },
         "test": {

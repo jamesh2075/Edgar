@@ -1,26 +1,26 @@
 <h1 id="tableLabel">Edgar Company Funding</h1>
-<h2 [textContent]="author"></h2>
-<h2><input type="text" [(ngModel)]="search" placeholder="Enter some or all of company name" /><button (click)='filter()'>Search by Name</button></h2>
-
-
+<a href="https://www.linkedin.com/in/james-h-2459a92"><h2 [textContent]="author"></h2></a>
+<div class="w3-padding-24"><h2><input style="width:600px" type="text" (input)='filter()' [(ngModel)]="search" placeholder="Enter some or all of company name" /><button style="position:relative;left:50px;" class="w3-button w3-indigo w3-hover-blue w3-round-xlarge" (click)='filter()'>Search by Name</button></h2></div>
 
 <p *ngIf="!companies"><em>Loading... Please refresh after a few seconds. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
 
-<table *ngIf="companies">
+<div class="w3-container">
+  <table *ngIf="companies" class="w3-table-all">
     <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Standard Fundable Amount</th>
-            <th>Special Fundable Amount</th>
-        </tr>
+      <tr>
+        <th style="width:200px;">Id</th>
+        <th>Name</th>
+        <th style="width:300px;">Standard Fundable Amount</th>
+        <th style="width:300px">Special Fundable Amount</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let company of companies">
-            <td>{{ company.id }}</td>
-            <td>{{ company.name }}</td>
-            <td>{{ company.standardFundableAmount }}</td>
-            <td>{{ company.specialFundableAmount }}</td>
-        </tr>
+      <tr *ngFor="let company of companies">
+        <td>{{ company.id }}</td>
+        <td>{{ company.name }}</td>
+        <td>{{ company.standardFundableAmount | currency }}</td>
+        <td>{{ company.specialFundableAmount | currency }}</td>
+      </tr>
     </tbody>
-</table>
+  </table>
+</div>

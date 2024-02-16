@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../environments/environment';
+import { CurrencyPipe } from '@angular/common';
+
 interface WeatherForecast {
   date: string;
   temperatureC: number;
