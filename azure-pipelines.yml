@@ -81,4 +81,4 @@ stages:
               azureSubscription: '$(azureSubscription)'
               appType: 'webApp'
               appName: 'EdgarApi'
-              package: '$(System.DefaultWorkingDirectry)/**/*.zip'
+              package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
