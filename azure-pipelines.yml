@@ -18,7 +18,7 @@ variables:
   environmentName: 'Production'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'windows-2019'
 
   # Build Configuration
   buildConfiguration: 'Release'
@@ -80,5 +80,5 @@ stages:
               azureSubscription: '$(azureSubscription)'
               appType: 'webApp'
               WebAppName: 'EdgarApi'
-              package: '$(System.ArtifactsDirectory)/**/*.zip'
+              packageForLinux: '$(System.ArtifactsDirectory)/**/*.zip'
               DeploymentType: webDeploy
