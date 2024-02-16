@@ -1,5 +1,16 @@
-<h1 id="tableLabel">Edgar Company Funding</h1>
-<a href="https://www.linkedin.com/in/james-h-2459a92"><h2 [textContent]="author"></h2></a>
+<div class="w3-row">
+  <div class="w3-col m3 w3-center">
+    <img src="https://www.sec.gov/files/sec-logo.png" />
+  </div>
+  <div class="w3-col m6 w3-center">
+    <h1>EDGAR Company Funding</h1>
+  </div>
+  <div class="w3-col m3 w3-center">
+    <a href="https://www.linkedin.com/in/james-h-2459a92"><p [textContent]="author"></p></a>
+</div>
+</div>
+
+
 <div class="w3-padding-24"><h2><input style="width:600px" type="text" (input)='filter()' [(ngModel)]="search" placeholder="Enter some or all of company name" /><button style="position:relative;left:50px;" class="w3-button w3-indigo w3-hover-blue w3-round-xlarge" (click)='filter()'>Search by Name</button></h2></div>
 
 <p *ngIf="!companies"><em>Loading... Please refresh after a few seconds. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
