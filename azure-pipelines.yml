@@ -49,14 +49,16 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
-    - task: PublishBuildArtifacts@1
-      displayName: Build the API
+    - task: DotNetCoreCLI@2
+      displayName: Publish the API
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'drop'
-        publishLocation: 'Container'
-
-
+        command: 'publish'
+        publishWebProjects: true
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Build.ArtifactStagingDirectory)'
+        publishLocation: 'pipeline'
 
 - stage: Deploy
   displayName: Deploy stage
