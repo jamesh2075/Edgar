@@ -41,11 +41,11 @@ stages:
       inputs:
         command: 'build'
         projects: '**/*.csproj'
-        arguments: '--configuration $(buildConfiguration) --output $(publishOutputDirectory)'
+        arguments: '--configuration $(buildConfiguration)'
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
-        rootFolderOrFile: '$(publishOutputDirectory)'
+        rootFolderOrFile: '$(Build.BinariesDirectory)'
         includeRootFolder: false
         archiveType: zip
         archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
