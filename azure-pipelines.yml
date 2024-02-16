@@ -49,13 +49,12 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
-    - task: DotNetCoreCLI@2
+    - task: PublishBuildArtifacts@1
       displayName: Build the API
       inputs:
-        command: 'publish'
-        publishWebProjects: true
-        arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-        zipAfterPublish: true
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
 
 
 
@@ -80,5 +79,4 @@ stages:
               azureSubscription: '$(azureSubscription)'
               appType: 'webApp'
               WebAppName: 'EdgarApi'
-              packageForLinux: '$(System.ArtifactsDirectory)/**/*.zip'
-              DeploymentType: webDeploy
+              packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
