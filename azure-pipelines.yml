@@ -56,11 +56,6 @@ stages:
         publishWebProjects: true
         zipAfterPublish: true
 
-    - task: PublishPipelineArtifact@1
-      inputs:
-        targetPath: '$(Build.ArtifactStagingDirectory)' 
-        artifactName: 'EdgarApi'
-
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
@@ -81,4 +76,4 @@ stages:
               azureSubscription: '$(azureSubscription)'
               appType: 'webApp'
               appName: 'EdgarApi'
-              package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+              package: '$(System.DefaultWorkingDirectory)/**/*.zip'
