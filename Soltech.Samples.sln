@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soltech.Samples.Fora.EdgarApi", "EdgarForaSampleApi\Soltech.Samples.Fora.EdgarApi.csproj", "{851DB722-31FA-4473-8F9E-0683613ACA90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soltech.Samples.Fora.EdgarApi", "Soltech.Samples.Fora.EdgarApi\Soltech.Samples.Fora.EdgarApi.csproj", "{DFCD76C3-4B34-46CB-838D-8D6AACBE6F86}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soltech.Samples.Fora.EdgarClient", "EdgarForaSampleClient\Soltech.Samples.Fora.EdgarClient.csproj", "{C2F4DB92-6C9C-4BA6-8CCF-C79E7FF916B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soltech.Samples.Fora.EdgarService", "Soltech.Samples.Fora.EdgarService\Soltech.Samples.Fora.EdgarService.csproj", "{A0CC2E37-7E8D-44A3-A5AA-2D76D0564247}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Soltech.Samples.Fora.EdgarClient", "Soltech.Samples.Fora.EdgarClient\Soltech.Samples.Fora.EdgarClient.esproj", "{471D57FC-E151-4EA7-A6A0-0ED3692737A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{851DB722-31FA-4473-8F9E-0683613ACA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{851DB722-31FA-4473-8F9E-0683613ACA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{851DB722-31FA-4473-8F9E-0683613ACA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{851DB722-31FA-4473-8F9E-0683613ACA90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2F4DB92-6C9C-4BA6-8CCF-C79E7FF916B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2F4DB92-6C9C-4BA6-8CCF-C79E7FF916B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2F4DB92-6C9C-4BA6-8CCF-C79E7FF916B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2F4DB92-6C9C-4BA6-8CCF-C79E7FF916B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFCD76C3-4B34-46CB-838D-8D6AACBE6F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFCD76C3-4B34-46CB-838D-8D6AACBE6F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFCD76C3-4B34-46CB-838D-8D6AACBE6F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFCD76C3-4B34-46CB-838D-8D6AACBE6F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0CC2E37-7E8D-44A3-A5AA-2D76D0564247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0CC2E37-7E8D-44A3-A5AA-2D76D0564247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0CC2E37-7E8D-44A3-A5AA-2D76D0564247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0CC2E37-7E8D-44A3-A5AA-2D76D0564247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{471D57FC-E151-4EA7-A6A0-0ED3692737A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471D57FC-E151-4EA7-A6A0-0ED3692737A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471D57FC-E151-4EA7-A6A0-0ED3692737A4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{471D57FC-E151-4EA7-A6A0-0ED3692737A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471D57FC-E151-4EA7-A6A0-0ED3692737A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{471D57FC-E151-4EA7-A6A0-0ED3692737A4}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
