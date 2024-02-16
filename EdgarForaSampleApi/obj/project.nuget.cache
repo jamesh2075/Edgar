@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UTbwWdMMeobVaNs1T3/R/3Tl6lYXKZHO2pf3VqP8i4DSPkmG1JwtAh+WXZuZZCyMwYgJ/nuaHcQ9pQewu3QKZA==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Fora\\EdgarForaSample\\EdgarForaSampleApi\\Soltech.Samples.Fora.EdgarApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JamesHenry\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512"
+  ],
+  "logs": []
+}
