@@ -58,7 +58,7 @@ stages:
     - task: PublishPipelineArtifact@1
       inputs:
         targetPath: '$(Build.ArtifactStagingDirectory)'
-        publishLocation: 'pipeline'
+        artifactName: EdgarApi
 
 - stage: Deploy
   displayName: Deploy stage
@@ -81,4 +81,4 @@ stages:
               azureSubscription: '$(azureSubscription)'
               appType: 'webApp'
               WebAppName: 'EdgarApi'
-              packageForLinux: '$(Pipeline.Workspace)/Build.Publish/$EdgarForaSample.zip'
+              packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
