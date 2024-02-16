@@ -69,10 +69,16 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
                 bool lastYearValid = false;
 
                 if (anyFirstYear ?? false)
-                    firstYearValid = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Min(u => int.Parse(u.Frame.Substring(2)) >= 2018) ?? false;
-                
+                {
+                    var min = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Min(u => int.Parse(u.Frame.Substring(2)));
+                    firstYearValid = min <= 2018;
+                }
+
                 if (anyLastYear ?? false)
-                    lastYearValid = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Max(u => int.Parse(u.Frame.Substring(2)) <= 2022) ?? false;
+                {
+                    var max = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Max(u => int.Parse(u.Frame.Substring(2)));
+                    lastYearValid = max >= 2022;
+                }
                 
                 var validIncome = firstYearValid && lastYearValid;
 
