@@ -42,13 +42,6 @@ stages:
         command: 'build'
         projects: '**/*.csproj'
         arguments: '--configuration $(buildConfiguration)'
-
-  - job: Publish
-    displayName: Publish
-    pool:
-      vmImage: $(vmImageName)
-
-    steps:
     - task: DotNetCoreCLI@2
       displayName: Publish the API
       inputs:
