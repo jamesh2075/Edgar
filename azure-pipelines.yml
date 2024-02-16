@@ -18,7 +18,7 @@ variables:
   environmentName: 'Production'
 
   # Agent VM image name
-  vmImageName: 'windows-latest'
+  vmImageName: 'ubuntu-latest'
 
   # Build Configuration
   buildConfiguration: 'Release'
