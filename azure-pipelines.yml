@@ -42,16 +42,17 @@ stages:
         command: 'build'
         projects: '**/*.csproj'
         arguments: '--configuration $(buildConfiguration)'
-    - task: DotNetCoreCLI@2
-      displayName: Publish the API
+    - task: ArchiveFiles@2
+      displayName: 'Archive files'
       inputs:
-        command: 'publish'
-        publishWebProjects: true
-        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    - task: PublishPipelineArtifact@1
-      inputs:
-        targetPath: '$(Build.ArtifactStagingDirectory)'
-        artifactName: EdgarApi
+        rootFolderOrFile: '$(Build.BinariesDirectory)'
+        includeRootFolder: false
+        archiveType: zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        replaceExistingArchive: true
+
+    - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      artifact: drop
 
 - stage: Deploy
   displayName: Deploy stage
@@ -67,11 +68,10 @@ stages:
       runOnce:
         deploy:
           steps:
-          - task: AzureRmWebAppDeployment@4
+          - task: AzureWebApp@1   
             displayName: 'Deploy the EdgarApi Azure Web App'
             inputs:
-              ConnectionType: AzureRM
               azureSubscription: '$(azureSubscription)'
               appType: 'webApp'
-              WebAppName: 'EdgarApi'
-              packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+              appName: 'EdgarApi'
+              package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
