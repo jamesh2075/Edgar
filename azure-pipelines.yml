@@ -81,4 +81,4 @@ stages:
               azureSubscription: '$(azureSubscription)'
               appType: 'webApp'
               WebAppName: 'EdgarApi'
-              packageForLinux: '$(Build.ArtifactStagingDirectory)\Build.Publish\*.zip'
+              packageForLinux: '$(Pipeline.Workspace)/Build.Publish/$EdgarForaSample.zip'
