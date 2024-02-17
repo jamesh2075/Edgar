@@ -92,5 +92,5 @@ export class AppComponent implements OnInit {
     )
   }
 
-  title = 'Edgar Company Funding';
+  title = 'EDGAR Company Funding';
 }
