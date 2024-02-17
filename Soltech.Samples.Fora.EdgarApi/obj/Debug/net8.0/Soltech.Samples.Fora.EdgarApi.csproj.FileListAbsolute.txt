@@ -54,3 +54,15 @@ D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\obj\Debug\net8.0\
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarApi.pdb
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarApi.genruntimeconfig.cache
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\obj\Debug\net8.0\ref\Soltech.Samples.Fora.EdgarApi.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarApi.csproj.AssemblyReference.cache
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarApi.csproj.CopyComplete
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\bin\Debug\net8.0\Soltech.Samples.Fora.EdgarApi.xml
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarApi.xml
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\bin\Debug\net8.0\Soltech.Samples.Fora.EdgarApi.staticwebassets.runtime.json
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\bin\Debug\net8.0\Soltech.Samples.Fora.EdgatData.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarApi\bin\Debug\net8.0\Soltech.Samples.Fora.EdgatData.pdb

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Soltech.Samples.Fora.EdgarApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f1fc22679d95d594ebe6acd973b3f4cbf049826")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0450dbc6aa49d277322a5b958419230ecfd45a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Soltech.Samples.Fora.EdgarApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Soltech.Samples.Fora.EdgarApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

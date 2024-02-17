@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\wwwroot\\Fora Coding Challenge v1.1.pdf",
+      "PackagePath": "staticwebassets\\Fora Coding Challenge v1.1.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Soltech.Samples.Fora.EdgarApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Soltech.Samples.Fora.EdgarApi.props",
+      "PackagePath": "build\\Soltech.Samples.Fora.EdgarApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Soltech.Samples.Fora.EdgarApi.props",
+      "PackagePath": "buildMultiTargeting\\Soltech.Samples.Fora.EdgarApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Soltech.Samples.Fora.EdgarApi.props",
+      "PackagePath": "buildTransitive\\Soltech.Samples.Fora.EdgarApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

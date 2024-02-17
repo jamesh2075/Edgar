@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "BywaAhCBKk+SwHxzrW5k/MWX0MujJ6R4oJuy8g5jK9k=",
+  "Hash": "xhvXAW2vV93QyutHKPBGkqS7/lvkatYeiV0xpgrHf1s=",
   "Source": "Soltech.Samples.Fora.EdgarApi",
   "BasePath": "_content/Soltech.Samples.Fora.EdgarApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Soltech.Samples.Fora.EdgarApi\\wwwroot",
+      "Source": "Soltech.Samples.Fora.EdgarApi",
+      "ContentRoot": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\wwwroot\\",
+      "BasePath": "_content/Soltech.Samples.Fora.EdgarApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\wwwroot\\Fora Coding Challenge v1.1.pdf",
+      "SourceId": "Soltech.Samples.Fora.EdgarApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\wwwroot\\",
+      "BasePath": "_content/Soltech.Samples.Fora.EdgarApi",
+      "RelativePath": "Fora Coding Challenge v1.1.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Fora Coding Challenge v1.1.pdf"
+    }
+  ]
 }

@@ -1,0 +1,12 @@
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\bin\Debug\net8.0\Soltech.Samples.Fora.EdgaData.deps.json
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\bin\Debug\net8.0\Soltech.Samples.Fora.EdgaData.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\bin\Debug\net8.0\Soltech.Samples.Fora.EdgaData.pdb
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\obj\Debug\net8.0\Soltech.Samples.Fora.EdgaData.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\obj\Debug\net8.0\Soltech.Samples.Fora.EdgaData.AssemblyInfoInputs.cache
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\obj\Debug\net8.0\Soltech.Samples.Fora.EdgaData.AssemblyInfo.cs
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\obj\Debug\net8.0\Soltech.Samples.Fora.EdgaData.csproj.CoreCompileInputs.cache
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\obj\Debug\net8.0\Soltech.Samples.Fora.EdgaData.sourcelink.json
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\obj\Debug\net8.0\Soltech.Samples.Fora.EdgaData.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\obj\Debug\net8.0\refint\Soltech.Samples.Fora.EdgaData.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\obj\Debug\net8.0\Soltech.Samples.Fora.EdgaData.pdb
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgaData\obj\Debug\net8.0\ref\Soltech.Samples.Fora.EdgaData.dll

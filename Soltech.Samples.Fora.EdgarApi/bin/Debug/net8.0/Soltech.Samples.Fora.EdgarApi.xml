@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Soltech.Samples.Fora.EdgarApi</name>
+    </assembly>
+    <members>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Contains actions that return EDGAR data provided by the SEC
+            </summary>
+            <param name="environment"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetJson">
+            <summary>
+            Returns a JavaScript Object Notation (JSON) document representing ALL
+            data retrieved from the SEC for the CIKs listed in the requirements document
+            </summary>
+            <returns>A JSON document</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAllCompanies">
+            <summary>
+            Returns all companies that have valid CY years and 10-K data
+            </summary>
+            <returns>All valid companies</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetCompaniesByName(System.String)">
+            <summary>
+            Returns all companies that start with the specified name,
+            and that have valid CY years and 10-K data
+            </summary>
+            <param name="name">The name to filter</param>
+            <returns>The companies that match the specified name</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAuthor">
+            <summary>
+            Return the author of this API
+            This allows it to be used across multiple places, including Swagger and the Angular UI
+            </summary>
+            <returns>The author of this API</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAuthorWebsite">
+            <summary>
+            Return the author's web site
+            </summary>
+            <returns>The author's web site</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAuthorRepository">
+            <summary>
+            Return the author's code repository
+            </summary>
+            <returns>The author's code repository</returns>
+        </member>
+        <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.AuthorOptions">
+            <summary>
+            Represents the Author configuration section in appSettings.json "Author":{"Name", ...}
+            (or App Settings in Azure or Environment variables)
+            </summary>
+        </member>
+        <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.Company">
+            <summary>
+            Represents a valid EDGAR company: one with a valid CY year and 10-K data
+            </summary>
+        </member>
+        <member name="T:CorsOptions">
+            <summary>
+            Represents the custom CORS application configuration section in appSettings.json (or elsewhere)
+            </summary>
+        </member>
+    </members>
+</doc>

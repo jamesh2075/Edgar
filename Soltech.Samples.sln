@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soltech.Samples.Fora.EdgarS
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Soltech.Samples.Fora.EdgarClient", "Soltech.Samples.Fora.EdgarClient\Soltech.Samples.Fora.EdgarClient.esproj", "{471D57FC-E151-4EA7-A6A0-0ED3692737A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soltech.Samples.Fora.EdgaData", "Soltech.Samples.Fora.EdgaData\Soltech.Samples.Fora.EdgaData.csproj", "{E3927E68-11B5-4C9C-8359-61C9CF10226E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soltech.Samples.Fora.EdgatData", "Soltech.Samples.Fora.EdgaData\Soltech.Samples.Fora.EdgatData.csproj", "{E3927E68-11B5-4C9C-8359-61C9CF10226E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
