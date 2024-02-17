@@ -84,7 +84,7 @@ export class AppComponent implements OnInit {
   getRepository() {
     this.http.get(`${environment.apiUrl}/api/edgar/repo`, { responseType: 'text' }).subscribe(
       (result) => {
-        this.repository = `See the Code: ${result}`;
+        this.repo = `See the Code: ${result}`;
       },
       (error) => {
         console.error(error);
