@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using System.Net.NetworkInformation;
 using Microsoft.AspNetCore.DataProtection.Repositories;
+using Microsoft.Extensions.Configuration;
 
 namespace Soltech.Samples.Fora.EdgarApi.Controllers
 {
@@ -15,7 +16,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
     public class EdgarController : ControllerBase
     {
         private IWebHostEnvironment environment;
-        internal AuthorOptions Author;
+        internal AuthorOptions? Author;
         internal static readonly AuthorOptions DefaultAuthor = new AuthorOptions
         {
             Name = "James Henry",
@@ -48,8 +49,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         {
             this.environment = environment;
 
-            Author = new AuthorOptions();
-            config.GetSection("Author").Bind(Author);
+            Author = config?.GetSection("Author")?.Get<AuthorOptions>();
 
             var dataPath = $@"{environment.ContentRootPath}\Data.json";
 
@@ -234,11 +234,16 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
             return Author?.Repository ?? DefaultAuthor.Repository;
         }
     }
+
+    /// <summary>
+    /// Represents the Author configuration section in appSettings.json "Author":{"Name", ...}
+    /// (or App Settings in Azure or Environment variables)
+    /// </summary>
     internal class AuthorOptions
     {
-        public string Name;
-        public string Website;
-        public string Repository;
+        public string Name { get; set; }
+        public string Website { get; set; }
+        public string Repository { get; set; }
     }
 
     /// <summary>
