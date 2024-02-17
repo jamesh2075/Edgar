@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Net.NetworkInformation;
 using Microsoft.AspNetCore.DataProtection.Repositories;
 using Microsoft.Extensions.Configuration;
+using Soltech.Samples.Fora.EdgarData;
 
 namespace Soltech.Samples.Fora.EdgarApi.Controllers
 {

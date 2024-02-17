@@ -20,4 +20,8 @@
     <None Include="wwwroot\Fora Coding Challenge v1.1.pdf" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Soltech.Samples.Fora.EdgaData\Soltech.Samples.Fora.EdgaData.csproj" />
+  </ItemGroup>
+
 </Project>

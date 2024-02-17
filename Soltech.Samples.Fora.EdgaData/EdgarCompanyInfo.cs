@@ -5,35 +5,30 @@ using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Soltech.Samples.Fora.EdgarApi
+namespace Soltech.Samples.Fora.EdgarData
 {
     public class EdgarCompanyInfo
     {
-        [Key]
         public int Cik { get; set; }
         public string EntityName { get; set; } = "";
         public InfoFact Facts { get; set; }
 
-        [ComplexType]
         public class InfoFact
         {
             [JsonPropertyName("us-gaap")]
             public InfoFactUsGaap UsGaap { get; set; }
         }
 
-        [ComplexType]
         public class InfoFactUsGaap
         {
             public InfoFactUsGaapNetIncomeLoss NetIncomeLoss { get; set; }
         }
 
-        [ComplexType]
         public class InfoFactUsGaapNetIncomeLoss
         {
             public InfoFactUsGaapIncomeLossUnits Units { get; set; }
         }
 
-        [ComplexType]
         public class InfoFactUsGaapIncomeLossUnits
         {
             public InfoFactUsGaapIncomeLossUnitsUsd[] Usd { get; set; } = Array.Empty<InfoFactUsGaapIncomeLossUnitsUsd>();

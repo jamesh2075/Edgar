@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using Soltech.Samples.Fora.EdgarApi;
+using Soltech.Samples.Fora.EdgarData;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -69,16 +69,19 @@ async Task DownloadFiles(string format)
 
             columns = sr.ReadLine();
         }
-        //var columns = sr.ReadToEnd();
         
 
         var json = JsonSerializer.Serialize(list);
         File.WriteAllText($@"{Environment.CurrentDirectory}\Data.json", json);
 
-        // TODO: Ideally, import the Data.json data into a database or store it on a shared folder.
+        // After this service runs, it copies the file to the EDGAR API.
+        // Ideally, it should reside in some type of shared data store or folder
+
+        // But for now, either manually copy it or let a WebJob copy it
+        // az webapp deploy --resource-group <group-name> --name <app-name> --src-path Data.json --type=static
     }
 
-    
+
 }
 
 await DownloadFiles(edgarApiEndpointFormat);
