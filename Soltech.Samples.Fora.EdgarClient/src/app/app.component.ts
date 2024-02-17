@@ -23,6 +23,9 @@ export class AppComponent implements OnInit {
   public website: string = '';
   public repo: string = '';
   search: string = '';
+  rawDataUrl: string = `${environment.apiUrl}/api/edgar/json`;
+  requirementsUrl: string = `${environment.apiUrl}/Fora Coding Challenge v1.1.pdf`;
+
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -62,7 +65,7 @@ export class AppComponent implements OnInit {
   getAuthor() {
     this.http.get(`${environment.apiUrl}/api/edgar/author`, { responseType: 'text' }).subscribe(
       (result) => {
-        this.author = `Created by: ${result}`;
+        this.author = `${result}`;
       },
       (error) => {
         console.error(error);
@@ -73,7 +76,7 @@ export class AppComponent implements OnInit {
   getWebsite() {
     this.http.get(`${environment.apiUrl}/api/edgar/website`, { responseType: 'text' }).subscribe(
       (result) => {
-        this.website = `See my profile: ${result}`;
+        this.website = `${result}`;
       },
       (error) => {
         console.error(error);
@@ -84,7 +87,7 @@ export class AppComponent implements OnInit {
   getRepository() {
     this.http.get(`${environment.apiUrl}/api/edgar/repo`, { responseType: 'text' }).subscribe(
       (result) => {
-        this.repo = `See the Code: ${result}`;
+        this.repo = `${result}`;
       },
       (error) => {
         console.error(error);
