@@ -6,6 +6,7 @@ using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using System.Net.NetworkInformation;
+using Microsoft.AspNetCore.DataProtection.Repositories;
 
 namespace Soltech.Samples.Fora.EdgarApi.Controllers
 {
@@ -14,6 +15,14 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
     public class EdgarController : ControllerBase
     {
         private IWebHostEnvironment environment;
+        internal AuthorOptions Author;
+        internal static readonly AuthorOptions DefaultAuthor = new AuthorOptions
+        {
+            Name = "James Henry",
+            Website = "https://www.linkedin.com/in/james-h-2459a92",
+            Repository = ""
+
+        };
 
         // All the company data, even non-10K data and those that do not follow the CYyyyy format
         private List<EdgarCompanyInfo> edgarList = new List<EdgarCompanyInfo>();
@@ -29,9 +38,18 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         const decimal lowIncomePercentage = .215m; // 21.5 percent for income less than 10B
         const decimal companyVowelPercentage = .15m; // 15 percent for companies whose name start with a vowel
         const decimal decreasedIncome = .25m; // 25 percent for companies whose 2022 income was less than 2021 income
-        public EdgarController(IWebHostEnvironment environment)
+        
+        /// <summary>
+        /// Contains actions that return EDGAR data provided by the SEC
+        /// </summary>
+        /// <param name="environment"></param>
+        /// <param name="config"></param>
+        public EdgarController(IWebHostEnvironment environment, IConfiguration config)
         {
             this.environment = environment;
+
+            Author = new AuthorOptions();
+            config.GetSection("Author").Bind(Author);
 
             var dataPath = $@"{environment.ContentRootPath}\Data.json";
 
@@ -59,10 +77,10 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
                 decimal standardFundableAmount = 0;
                 decimal specialFundableAmount = 0;
 
+                // How to calculate Standard Fundable Amount:
                 // Bullet Point 1
                 // Company must have income data for all years between (and including) 2018 and 2022.
                 // If they did not, their Standard Fundable Amount is $0.
-
                 var anyFirstYear = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => int.Parse(u.Frame.Substring(2)) >= 2018).Any();
                 var anyLastYear = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => int.Parse(u.Frame.Substring(2)) <= 2022).Any();
                 bool firstYearValid = false;
@@ -73,29 +91,33 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
                     var min = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Min(u => int.Parse(u.Frame.Substring(2)));
                     firstYearValid = min <= 2018;
                 }
-
                 if (anyLastYear ?? false)
                 {
                     var max = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Max(u => int.Parse(u.Frame.Substring(2)));
                     lastYearValid = max >= 2022;
                 }
-                
                 var validIncome = firstYearValid && lastYearValid;
 
+
+                // Bullet Point 2
+                // Company must have had positive income in both 2021 and 2022:
+                // If they did not, their Standard Fundable Amount is $0..
                 var valid2021Income = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => int.Parse(u.Frame.Substring(2)) == 2021 && u.Val > 0).Any() ?? false;
                 var valid2022Income = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => int.Parse(u.Frame.Substring(2)) == 2022 && u.Val > 0).Any() ?? false;
                 validIncome &= valid2021Income && valid2022Income;
+
 
                 // Bullet Point 3
                 // Using highest income between 2018 and 2022:
                 // If income is greater than or equal to $10B, standard fundable amount is 12.33%
                 // of income.
                 // If income is less than $10B, standard fundable amount is 21.51 % of income.
-
                 if (validIncome)
                 {
-                    var list = from u in edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd let year = int.Parse(u.Frame.Substring(2))
-                               where year >= 2018 && year <= 2022 select u;
+                    var list = from u in edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd
+                               let year = int.Parse(u.Frame.Substring(2))
+                               where year >= 2018 && year <= 2022
+                               select u;
 
                     decimal highestIncome = list.Max(u => u.Val);
                     if (highestIncome >= 10000000000)
@@ -104,6 +126,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
                         standardFundableAmount = lowIncomePercentage * highestIncome;
                 }
 
+                // How to calculate the Special Fundable Amount:
                 // Initially, the Special Fundable Amount is the same as Standard Fundable Amount.
                 // If the company name starts with a vowel, add 15% to the standard funding amount.
                 // If the company’s 2022 income was less than their 2021 income, subtract 25% from their
@@ -126,7 +149,12 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
             });
         }
 
-        [HttpGet(Name = "GetJson")]
+        /// <summary>
+        /// Returns a JavaScript Object Notation (JSON) document representing ALL
+        /// data retrieved from the SEC for the CIKs listed in the requirements document
+        /// </summary>
+        /// <returns>A JSON document</returns>
+        [HttpGet]
         [Produces("application/json")]
         [Route("json")]
         public JsonResult GetJson()
@@ -134,15 +162,25 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
             return new JsonResult(edgarList);
         }
 
-        [HttpGet(Name = "GetAllCompanies")]
+        /// <summary>
+        /// Returns all companies that have valid CY years and 10-K data
+        /// </summary>
+        /// <returns>All valid companies</returns>
+        [HttpGet("GetAllCompanies")]
         [Route("Companies")]
         public IEnumerable<Company> GetAllCompanies()
         {
-            
+
             return companyList;
         }
 
-        [HttpGet(Name = "GetCompaniesByName")]
+        /// <summary>
+        /// Returns all companies that start with the specified name,
+        /// and that have valid CY years and 10-K data
+        /// </summary>
+        /// <param name="name">The name to filter</param>
+        /// <returns>The companies that match the specified name</returns>
+        [HttpGet("GetCompaniesByName")]
         [Route("Companies/{name}")]
         public IEnumerable<Company> GetCompaniesByName(string name)
         {
@@ -151,13 +189,50 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
             return filteredCompanies;
         }
 
+        /// <summary>
+        /// Return the author of this API
+        /// This allows it to be used across multiple places, including Swagger and the Angular UI
+        /// </summary>
+        /// <returns>The author of this API</returns>
+        [HttpGet("GetAuthor")]
         [Route("Author")]
         public string GetAuthor()
         {
-            return "James Henry";
+            return Author?.Name ?? DefaultAuthor.Name;
+        }
+
+        /// <summary>
+        /// Return the author's web site
+        /// </summary>
+        /// <returns>The author's web site</returns>
+        [HttpGet("GetAuthorWebsite")]
+        [Route("website")]
+        public string GetAuthorWebsite()
+        {
+            return Author?.Website ?? DefaultAuthor.Website;
+        }
+
+        /// <summary>
+        /// Return the author's code repository
+        /// </summary>
+        /// <returns>The author's code repository</returns>
+        [HttpGet("GetAuthorRepository")]
+        [Route("repo")]
+        public string GetAuthorRepository()
+        {
+            return Author?.Repository ?? DefaultAuthor.Repository;
         }
     }
+    internal class AuthorOptions
+    {
+        public string Name;
+        public string Website;
+        public string Repository;
+    }
 
+    /// <summary>
+    /// Represents a valid EDGAR company: one with a valid CY year and 10-K data
+    /// </summary>
     public class Company
     {
         public string Name { get; set; }

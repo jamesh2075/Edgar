@@ -17,8 +17,6 @@ namespace Soltech.Samples.Fora.EdgarApi
         [ComplexType]
         public class InfoFact
         {
-            public int InfoFactId;
-
             [JsonPropertyName("us-gaap")]
             public InfoFactUsGaap UsGaap { get; set; }
         }
@@ -26,26 +24,22 @@ namespace Soltech.Samples.Fora.EdgarApi
         [ComplexType]
         public class InfoFactUsGaap
         {
-            public int InfoFactUsGaapId;
             public InfoFactUsGaapNetIncomeLoss NetIncomeLoss { get; set; }
         }
 
         [ComplexType]
         public class InfoFactUsGaapNetIncomeLoss
         {
-            public int InfoFactUsGaapNetIncomeLossId;
             public InfoFactUsGaapIncomeLossUnits Units { get; set; }
         }
 
         [ComplexType]
         public class InfoFactUsGaapIncomeLossUnits
         {
-            public int InfoFactUsGaapIncomeLossUnitsId;
             public InfoFactUsGaapIncomeLossUnitsUsd[] Usd { get; set; } = Array.Empty<InfoFactUsGaapIncomeLossUnitsUsd>();
         }
         public class InfoFactUsGaapIncomeLossUnitsUsd
         {
-            public int InfoFactUsGaapIncomeLossUnitsUsdId;
             /// <summary>
             /// Possibilities include 10-Q, 10-K,8-K, 20-F, 40-F, 6-K, and their variants.YOU ARE INTERESTED ONLY IN 10-K DATA!
             /// </summary>
