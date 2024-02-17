@@ -3,13 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from '../environments/environment';
 import { CurrencyPipe } from '@angular/common';
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
-}
-
 interface Company {
   id: number;
   name: string;
@@ -24,27 +17,19 @@ interface Company {
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  public forecasts: WeatherForecast[] = [];
+
   public companies: Company[] = [];
   public author: string = '';
+  public website: string = '';
+  public repo: string = '';
   search: string = '';
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.getForecasts();
     this.getCompanies();
     this.getAuthor();
-  }
-
-  getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-      (result) => {
-        this.forecasts = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    this.getWebsite();
+    this.getRepository();
   }
 
   getCompanies() {
@@ -78,6 +63,28 @@ export class AppComponent implements OnInit {
     this.http.get(`${environment.apiUrl}/api/edgar/author`, { responseType: 'text' }).subscribe(
       (result) => {
         this.author = `Created by: ${result}`;
+      },
+      (error) => {
+        console.error(error);
+      }
+    )
+  }
+
+  getWebsite() {
+    this.http.get(`${environment.apiUrl}/api/edgar/website`, { responseType: 'text' }).subscribe(
+      (result) => {
+        this.website = `See my profile: ${result}`;
+      },
+      (error) => {
+        console.error(error);
+      }
+    )
+  }
+
+  getRepository() {
+    this.http.get(`${environment.apiUrl}/api/edgar/repo`, { responseType: 'text' }).subscribe(
+      (result) => {
+        this.repository = `See the Code: ${result}`;
       },
       (error) => {
         console.error(error);
