@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Soltech.Samples.Fora.EdgaData\Soltech.Samples.Fora.EdgatData.csproj" />
+    <ProjectReference Include="..\Soltech.Samples.Fora.EdgarData\Soltech.Samples.Fora.EdgatData.csproj" />
   </ItemGroup>
 
 </Project>

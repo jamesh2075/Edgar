@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgaData\\Soltech.Samples.Fora.EdgaData.csproj",
-      "projectName": "Soltech.Samples.Fora.EdgaData",
-      "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgaData\\Soltech.Samples.Fora.EdgaData.csproj",
+      "projectUniqueName": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj",
+      "projectName": "Soltech.Samples.Fora.EdgatData",
+      "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj",
       "packagesPath": "C:\\Users\\JamesHenry\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgaData\\obj\\",
+      "outputPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

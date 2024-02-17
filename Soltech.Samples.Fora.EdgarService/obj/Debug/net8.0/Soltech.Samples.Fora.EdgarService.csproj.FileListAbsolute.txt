@@ -4,6 +4,8 @@ D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\bin\Debug\net
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\bin\Debug\net8.0\Soltech.Samples.Fora.EdgarService.runtimeconfig.json
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\bin\Debug\net8.0\Soltech.Samples.Fora.EdgarService.dll
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\bin\Debug\net8.0\Soltech.Samples.Fora.EdgarService.pdb
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\bin\Debug\net8.0\Soltech.Samples.Fora.EdgatData.dll
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\bin\Debug\net8.0\Soltech.Samples.Fora.EdgatData.pdb
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarService.csproj.AssemblyReference.cache
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarService.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarService.AssemblyInfoInputs.cache
@@ -16,5 +18,3 @@ D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Debug\net
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarService.pdb
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Debug\net8.0\Soltech.Samples.Fora.EdgarService.genruntimeconfig.cache
 D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Debug\net8.0\ref\Soltech.Samples.Fora.EdgarService.dll
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\bin\Debug\net8.0\Soltech.Samples.Fora.EdgatData.dll
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\bin\Debug\net8.0\Soltech.Samples.Fora.EdgatData.pdb

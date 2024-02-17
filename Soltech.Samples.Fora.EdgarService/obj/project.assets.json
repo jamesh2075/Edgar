@@ -17,8 +17,8 @@
   "libraries": {
     "Soltech.Samples.Fora.EdgatData/1.0.0": {
       "type": "project",
-      "path": "../Soltech.Samples.Fora.EdgaData/Soltech.Samples.Fora.EdgatData.csproj",
-      "msbuildProject": "../Soltech.Samples.Fora.EdgaData/Soltech.Samples.Fora.EdgatData.csproj"
+      "path": "../Soltech.Samples.Fora.EdgarData/Soltech.Samples.Fora.EdgatData.csproj",
+      "msbuildProject": "../Soltech.Samples.Fora.EdgarData/Soltech.Samples.Fora.EdgatData.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -62,8 +62,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgaData\\Soltech.Samples.Fora.EdgatData.csproj": {
-              "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgaData\\Soltech.Samples.Fora.EdgatData.csproj"
+            "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj": {
+              "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj"
             }
           }
         }
