@@ -37,7 +37,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         const decimal highIncomePercentage = .1233m; // 12.33 percent for income 10B or greater
         const decimal lowIncomePercentage = .215m; // 21.5 percent for income less than 10B
         const decimal companyVowelPercentage = .15m; // 15 percent for companies whose name start with a vowel
-        const decimal decreasedIncome = .25m; // 25 percent for companies whose 2022 income was less than 2021 income
+        const decimal decreasedIncomePercentage = .25m; // 25 percent for companies whose 2022 income was less than 2021 income
         
         /// <summary>
         /// Contains actions that return EDGAR data provided by the SEC
@@ -102,6 +102,9 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
                 // Bullet Point 2
                 // Company must have had positive income in both 2021 and 2022:
                 // If they did not, their Standard Fundable Amount is $0..
+                var income2021 = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => int.Parse(u.Frame.Substring(2)) == 2021).FirstOrDefault();
+                var income2022 = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => int.Parse(u.Frame.Substring(2)) == 2022).FirstOrDefault();
+
                 var valid2021Income = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => int.Parse(u.Frame.Substring(2)) == 2021 && u.Val > 0).Any() ?? false;
                 var valid2022Income = edgar.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => int.Parse(u.Frame.Substring(2)) == 2022 && u.Val > 0).Any() ?? false;
                 validIncome &= valid2021Income && valid2022Income;
@@ -132,12 +135,20 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
                 // If the company’s 2022 income was less than their 2021 income, subtract 25% from their
                 // standard funding amount.
 
-                specialFundableAmount = standardFundableAmount;
-                var companyName = String.IsNullOrEmpty(edgar.EntityName) ? " " : edgar.EntityName;
-                var vowels = new char[] { 'A', 'E', 'I', 'O', 'U' }; // What about sometimes Y :)
-                if (vowels.Contains(companyName[0]))
-                    specialFundableAmount = (companyVowelPercentage * standardFundableAmount) + standardFundableAmount;
-
+                if (validIncome)
+                {
+                    specialFundableAmount = standardFundableAmount;
+                    var companyName = String.IsNullOrEmpty(edgar.EntityName) ? " " : edgar.EntityName;
+                    var vowels = new char[] { 'A', 'E', 'I', 'O', 'U' }; // What about sometimes Y :)
+                    if (vowels.Contains(companyName[0]))
+                    {
+                        specialFundableAmount = (companyVowelPercentage * standardFundableAmount) + standardFundableAmount;
+                    }
+                    else if (income2022?.Val < income2021?.Val)
+                    {
+                        specialFundableAmount = standardFundableAmount - (decreasedIncomePercentage * standardFundableAmount);
+                    }
+                }
 
                 var company = new Company();
                 company.Name = edgar.EntityName;
