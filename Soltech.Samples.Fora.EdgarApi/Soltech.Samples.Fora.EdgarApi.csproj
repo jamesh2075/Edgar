@@ -16,4 +16,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Fora Coding Challenge v1.1.pdf" />
+  </ItemGroup>
+
 </Project>

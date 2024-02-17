@@ -4,10 +4,12 @@
   </div>
   <div class="w3-col m6 w3-center">
     <h1 class="w3-xxxlarge">EDGAR Company Funding</h1>
+    <p>See the raw <a target="_blank" [href]="rawDataUrl">data</a></p>
+    <p>See the <a target="_blank" [href]="requirementsUrl">requirements</a></p>
   </div>
   <div class="w3-col m3 w3-center">
-    <a target="_blank" [href]="website"><p [textContent]="author"></p></a>
-    <a target="_blank" [href]="repo">See the Code</a>
+    <p>Created by <a target="_blank" [href]="website" [textContent]="author"></a></p>
+    <p>See the <a target="_blank" [href]="repo">code</a></p>
 </div>
 </div>
 
@@ -41,3 +43,8 @@
     </tbody>
   </table>
 </div>
+
+<footer class="w3-container w3-theme-dark w3-padding-16 w3-center">
+  <h3>Created with ASP.NET Core 8.0.2, Node 18.19.1, and Angular 17.2.1</h3>
+  <p className="w3-tiny">&copy; 2024. All rights reserved.</p>
+</footer>
