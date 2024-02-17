@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
   public repo: string = '';
   public rawDataUrl: string = `${environment.apiUrl}/api/edgar/json`;
   public requirementsUrl: string = `${environment.apiUrl}/Fora Coding Challenge v1.1.pdf`;
+  public swaggerUrl: string = `${environment.apiUrl}/swagger`;
   search: string = '';
 
   constructor(private http: HttpClient) {}
