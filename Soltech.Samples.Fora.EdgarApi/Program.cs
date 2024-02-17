@@ -45,6 +45,8 @@ app.UseAuthorization();
 
 app.UseCors("EdgarAPI");
 
+app.UseStaticFiles();
+
 app.MapControllers();
 
 app.Run();
