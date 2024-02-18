@@ -74,11 +74,13 @@ async Task DownloadFiles(string format)
         var json = JsonSerializer.Serialize(list);
         File.WriteAllText($@"{Environment.CurrentDirectory}\Data.json", json);
 
-        // After this service runs, it copies the file to the EDGAR API.
+        // After this service runs, it should copy the file to the EDGAR API.
         // Ideally, it should reside in some type of shared data store or folder
 
         // But for now, either manually copy it or let a WebJob copy it
         // az webapp deploy --resource-group <group-name> --name <app-name> --src-path Data.json --type=static
+
+        File.Copy("Data.json", @"C:\home\site\wwwroot\Data.json", true);
     }
 
 

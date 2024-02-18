@@ -1,10 +1,12 @@
-using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.OpenApi.Models;
 using Soltech.Samples.Fora.EdgarApi.Controllers;
 using System.Reflection;
 
+// Create an application builder so that additional services can be added
 var builder = WebApplication.CreateBuilder(args);
 
+// Tell ASP.NET Core to add the service that handles API routes
 builder.Services.AddControllers();
 
 // Read the allowed CORS front-end URLs from application settings (or environment variables)
@@ -13,6 +15,7 @@ var corsOptions = builder.Configuration?.GetSection("CORS")?.Get<List<CorsOption
 // Tell ASP.NET Core to add the service that handles CORS requests
 builder.Services.AddCors(options =>
 {
+    // Specify a policy that allows certain front-end URLs to access this service
     options.AddPolicy("EdgarAPI",
         policy =>
         {
@@ -42,20 +45,28 @@ builder.Services.AddSwaggerGen((c) =>
     c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
+// Build the application with all the necessary services added
 var app = builder.Build();
 
-
+// This allows users to browse to the JSON-generated OpenAPI document
 app.UseSwagger();
+
+// This allows users to browse to the HTML-generated OpenAPI document
 app.UseSwaggerUI();
 
-app.UseAuthorization();
-
+// This applies the specified CORS policy globally to all API endpoints
 app.UseCors("EdgarAPI");
 
+// This allows users to browse to the Requirements document
 app.UseStaticFiles();
 
+// Use automatic API routing based on controller/action endpoints
 app.MapControllers();
 
+// Specify a custom endpoint that automatically redirect root requests to the OpenAPI page
+app.MapGet("/", async http => http.Response.Redirect("/swagger"));
+
+// Finally, run the application
 app.Run();
 
 /// <summary>
