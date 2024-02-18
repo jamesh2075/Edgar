@@ -1,9 +1,0 @@
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Release\net8.0\PubTmp\Out\app_data\Jobs\Triggered\Soltech.Samples.Fora.EdgarService\CIKs.txt
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Release\net8.0\PubTmp\Out\app_data\Jobs\Triggered\Soltech.Samples.Fora.EdgarService\Settings.job
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Release\net8.0\PubTmp\Out\app_data\Jobs\Triggered\Soltech.Samples.Fora.EdgarService\Soltech.Samples.Fora.EdgarService.exe
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Release\net8.0\PubTmp\Out\app_data\Jobs\Triggered\Soltech.Samples.Fora.EdgarService\Soltech.Samples.Fora.EdgarService.dll
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Release\net8.0\PubTmp\Out\app_data\Jobs\Triggered\Soltech.Samples.Fora.EdgarService\Soltech.Samples.Fora.EdgarService.deps.json
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Release\net8.0\PubTmp\Out\app_data\Jobs\Triggered\Soltech.Samples.Fora.EdgarService\Soltech.Samples.Fora.EdgarService.runtimeconfig.json
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Release\net8.0\PubTmp\Out\app_data\Jobs\Triggered\Soltech.Samples.Fora.EdgarService\Soltech.Samples.Fora.EdgarService.pdb
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Release\net8.0\PubTmp\Out\app_data\Jobs\Triggered\Soltech.Samples.Fora.EdgarService\Soltech.Samples.Fora.EdgaData.dll
-D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarService\obj\Release\net8.0\PubTmp\Out\app_data\Jobs\Triggered\Soltech.Samples.Fora.EdgarService\Soltech.Samples.Fora.EdgaData.pdb

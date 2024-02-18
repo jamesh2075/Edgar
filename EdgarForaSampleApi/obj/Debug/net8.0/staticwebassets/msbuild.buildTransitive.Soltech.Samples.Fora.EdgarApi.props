@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Soltech.Samples.Fora.EdgarApi.props" />
-</Project>

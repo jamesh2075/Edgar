@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+.vs
+/EdgarForaSampleClient
+/EdgarForaSampleApi
+/Soltech.Samples.Fora.EdgarApi/bin
+/Soltech.Samples.Fora.EdgarApi/obj
+/Soltech.Samples.Fora.EdgarClient/obj
+/Soltech.Samples.Fora.EdgarClient/dist
+/Soltech.Samples.Fora.EdgarService/obj
+/Soltech.Samples.Fora.EdgaData
+/Soltech.Samples.Fora.EdgarData/bin
+/Soltech.Samples.Fora.EdgarData/obj
+/Soltech.Samples.Fora.EdgarService/bin
+/Soltech.Samples.Fora.EdgarService/obj

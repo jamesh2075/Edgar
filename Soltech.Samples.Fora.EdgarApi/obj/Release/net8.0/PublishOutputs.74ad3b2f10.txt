@@ -1,8 +1,0 @@
-D:\Projects\Fora\EdgarForaSample\EdgarForaSampleApi\obj\Release\net8.0\PubTmp\Out\Soltech.Samples.Fora.EdgarApi.exe
-D:\Projects\Fora\EdgarForaSample\EdgarForaSampleApi\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
-D:\Projects\Fora\EdgarForaSample\EdgarForaSampleApi\obj\Release\net8.0\PubTmp\Out\appsettings.json
-D:\Projects\Fora\EdgarForaSample\EdgarForaSampleApi\obj\Release\net8.0\PubTmp\Out\Data.json
-D:\Projects\Fora\EdgarForaSample\EdgarForaSampleApi\obj\Release\net8.0\PubTmp\Out\Soltech.Samples.Fora.EdgarApi.dll
-D:\Projects\Fora\EdgarForaSample\EdgarForaSampleApi\obj\Release\net8.0\PubTmp\Out\Soltech.Samples.Fora.EdgarApi.deps.json
-D:\Projects\Fora\EdgarForaSample\EdgarForaSampleApi\obj\Release\net8.0\PubTmp\Out\Soltech.Samples.Fora.EdgarApi.runtimeconfig.json
-D:\Projects\Fora\EdgarForaSample\EdgarForaSampleApi\obj\Release\net8.0\PubTmp\Out\Soltech.Samples.Fora.EdgarApi.pdb

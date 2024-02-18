@@ -1,1 +1,0 @@
-dotnet Soltech.Samples.Fora.EdgarService.dll %*
