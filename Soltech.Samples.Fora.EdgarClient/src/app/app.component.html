@@ -4,14 +4,16 @@
     <p>This is NOT an official SEC app.</p>
   </div>
   <div class="w3-col m6 w3-center">
-    <h1 class="w3-xxxlarge">EDGAR Company Funding</h1>
-    <p>See the raw <a target="_blank" [href]="rawDataUrl">data</a></p>
-    <p>See the <a target="_blank" [href]="requirementsUrl">requirements</a></p>
+    <h1 class="w3-xxxlarge">EDGAR Company Funding {{environmentName}}</h1>
+    <div class="w3-row">
+      <div class="w3-col s4 w3-center">See the <a target="_blank" [href]="requirementsUrl">requirements</a></div>
+      <div class="w3-col s4 w3-center">See the raw <a target="_blank" [href]="rawDataUrl">data</a></div>
+      <div class="w3-col s4 w3-center">See the <a target="_blank" [href]="swaggerUrl">API</a></div>
+    </div>
   </div>
-  <div class="w3-col m3 w3-center">
+  <div class="w3-col m3 w3-center" style="vertical-align:baseline">
     <p>Created by <a target="_blank" [href]="website" [textContent]="author"></a></p>
     <p>See the <a target="_blank" [href]="repo">code</a></p>
-    <p>See the <a target="_blank" [href]="swaggerUrl">API</a></p>
   </div>
 </div>
 

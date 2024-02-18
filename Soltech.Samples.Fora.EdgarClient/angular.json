@@ -61,6 +61,27 @@
               ],
               "outputHashing": "all"
             },
+            "local": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,
@@ -77,6 +98,9 @@
             },
             "development": {
               "buildTarget": "EdgarClient:build:development"
+            },
+            "local": {
+              "buildTarget": "EdgarClient:build:local"
             }
           },
           "defaultConfiguration": "development",

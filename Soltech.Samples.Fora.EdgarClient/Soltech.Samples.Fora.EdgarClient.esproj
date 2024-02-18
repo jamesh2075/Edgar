@@ -7,7 +7,4 @@
     <!-- Folder where production build objects will be placed -->
     <PublishAssetsDirectory>$(MSBuildProjectDirectory)\dist\Soltech.Samples.Fora.EdgarClient\</PublishAssetsDirectory>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="src\environments\" />
-  </ItemGroup>
 </Project>
