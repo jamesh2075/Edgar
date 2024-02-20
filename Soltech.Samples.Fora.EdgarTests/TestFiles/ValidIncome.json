@@ -1,0 +1,56 @@
+
+  {
+    "Cik": 100,
+    "EntityName": "Aldi",
+    "Facts": {
+      "us-gaap": {
+        "NetIncomeLoss": {
+          "Units": {
+            "Usd": [
+              {
+                "Form": "10-Q",
+                "Frame": "",
+                "Val": 136184000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2017",
+                "Val": 69030000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2018",
+                "Val": 100000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2019",
+                "Val": 200000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2020",
+                "Val": 300000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2021",
+                "Val": 400000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2022",
+                "Val": 500000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2023",
+                "Val": 600000
+              }
+
+            ]
+          }
+        }
+      }
+    }
+  }

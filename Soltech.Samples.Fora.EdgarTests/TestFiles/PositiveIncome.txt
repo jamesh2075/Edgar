@@ -1,0 +1,30 @@
+// 2021 and 2022 income are positive
+  {
+    "Cik": 100,
+    "EntityName": "Aldi",
+    "Facts": {
+      "us-gaap": {
+        "NetIncomeLoss": {
+          "Units": {
+            "Usd": [
+              {
+                "Form": "10-K",
+                "Frame": "CY2020",
+                "Val":-100000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2021",
+                "Val": 200000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2022",
+                "Val": 300000
+              }
+            ]
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,25 @@
+// There is no 10-K income between 2018 and 2022
+  {
+    "Cik": 100,
+    "EntityName": "Aldi",
+    "Facts": {
+      "us-gaap": {
+        "NetIncomeLoss": {
+          "Units": {
+            "Usd": [
+              {
+                "Form": "10-K",
+                "Frame": "CY2017",
+                "Val": 100000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2023",
+                "Val": 100000
+              }
+            ]
+          }
+        }
+      }
+    }
+  }

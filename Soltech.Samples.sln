@@ -11,6 +11,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Soltech.Samples.Fora.EdgarC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soltech.Samples.Fora.EdgatData", "Soltech.Samples.Fora.EdgarData\Soltech.Samples.Fora.EdgatData.csproj", "{BD9BC14E-5E15-452A-AF84-F37BAC9C078F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soltech.Samples.Fora.EdgarTests", "Soltech.Samples.Fora.EdgarTests\Soltech.Samples.Fora.EdgarTests.csproj", "{30940DA8-947C-486F-91B3-EEB93C596ACB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{BD9BC14E-5E15-452A-AF84-F37BAC9C078F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD9BC14E-5E15-452A-AF84-F37BAC9C078F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD9BC14E-5E15-452A-AF84-F37BAC9C078F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30940DA8-947C-486F-91B3-EEB93C596ACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30940DA8-947C-486F-91B3-EEB93C596ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30940DA8-947C-486F-91B3-EEB93C596ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30940DA8-947C-486F-91B3-EEB93C596ACB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
