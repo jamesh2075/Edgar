@@ -1,54 +1,53 @@
-<div class="w3-panel w3-theme-dark w3-row w3-container w3-padding-24">
-  <div class="w3-col m3 w3-center">
-    <img src="https://www.sec.gov/files/sec-logo.png" />
+<div id="headingDiv" class="w3-row w3-theme-dark w3-padding-24">
+  <div id="logoDiv" class="w3-col m3 w3-center">
+    <img src="https://www.sec.gov/files/sec-logo.png" alt="The Securities and Exchange Commission logo" title="The Securities and Exchange Commission logo" />
     <p>This is NOT an official SEC app.</p>
   </div>
-  <div class="w3-col m6 w3-center">
+  <div id="brandDiv" class="w3-col m6 w3-center">
     <h1 class="w3-xxxlarge">EDGAR Company Funding {{environmentName}}</h1>
     <div class="w3-row">
-      <div class="w3-col s4 w3-center">See the <a target="_blank" [href]="requirementsUrl">requirements</a></div>
-      <div class="w3-col s4 w3-center">See the raw <a target="_blank" [href]="rawDataUrl">data</a></div>
-      <div class="w3-col s4 w3-center">See the <a target="_blank" [href]="swaggerUrl">API</a></div>
+      <div class="w3-col s4"><a target="_blank" title="Read the requirements" [href]="requirementsUrl">Requirements</a></div>
+      <div class="w3-col s4"><a target="_blank" title="See the raw data" [href]="rawDataUrl">Data</a></div>
+      <div class="w3-col s4"><a target="_blank" title="Test the API" [href]="swaggerUrl">API</a></div>
     </div>
   </div>
-  <div class="w3-col m3 w3-center" style="vertical-align:baseline">
-    <p>Created by <a target="_blank" [href]="website" [textContent]="author"></a></p>
-    <p>See the <a target="_blank" [href]="repo">code</a></p>
+  <div id="authorDiv" class="w3-col m3">
+    <p>Created by <a target="_blank" title="Get to know the author" [href]="website" [textContent]="author"></a></p>
+    <p>See the <a target="_blank" title="Clone the code" [href]="repo">code</a></p>
   </div>
 </div>
 
 
 <div class="w3-padding-24">
   <h2>
-    <input class="w3-border w3-round-xlarge w3-padding-14" style="width:600px; text-align:center;" type="text" (input)='filter()' [(ngModel)]="search" placeholder="Enter some or all of company name" />
-    <!--<button style="position:relative;left:50px;" class="w3-button w3-indigo w3-hover-blue w3-round-xlarge" (click)='filter()'>Search by Name</button>-->
+    <input id="searchInput" class="w3-border w3-round-xlarge w3-padding-14" type="text" (input)='filter()' [(ngModel)]="search" placeholder="Enter company name" />
   </h2>
 </div>
 
 <p *ngIf="!companies"><em>Loading... Please refresh after a few seconds. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
 
-<div class="w3-container">
+<div class="w3-responsive">
   <table *ngIf="companies" class="w3-table-all">
     <thead>
       <tr class="w3-theme-dark">
-        <th style="width:200px;">CIK</th>
+        <th>CIK</th>
         <th>Name</th>
-        <th style="width:300px;">Standard Fundable Amount</th>
-        <th style="width:300px">Special Fundable Amount</th>
+        <th class="w3-right-align">Standard Fundable Amount</th>
+        <th class="w3-right-align">Special Fundable Amount</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let company of companies">
         <td>{{ company.id }}</td>
         <td>{{ company.name }}</td>
-        <td>{{ company.standardFundableAmount | currency }}</td>
-        <td>{{ company.specialFundableAmount | currency }}</td>
+        <td class="w3-right-align">{{ company.standardFundableAmount | currency }}</td>
+        <td class="w3-right-align">{{ company.specialFundableAmount | currency }}</td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <footer class="w3-container w3-theme-dark w3-padding-16 w3-center">
-  <h3>Created with ASP.NET Core 8.0.2, Node 18.19.1, and Angular 17.2.1</h3>
-  <p className="w3-tiny">&copy; 2024. All rights reserved.</p>
+  <h3>Created with ASP.NET Core {{aspnetVersion}}, Node 18.19.1, and Angular {{angularVersion}}</h3>
+  <p className="w3-tiny">&copy; {{copyrightYear}}. All rights reserved.</p>
 </footer>

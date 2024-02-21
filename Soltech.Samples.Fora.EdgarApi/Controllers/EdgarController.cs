@@ -134,7 +134,6 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         [Route("Companies")]
         public IEnumerable<Company> GetAllCompanies()
         {
-
             return companyList;
         }
 
@@ -160,7 +159,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         /// <returns>The author of this API</returns>
         [HttpGet("GetAuthor")]
         [Route("Author")]
-        public string GetAuthor()
+        public string? GetAuthor()
         {
             return Author?.Name ?? DefaultAuthor.Name;
         }
@@ -171,7 +170,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         /// <returns>The author's web site</returns>
         [HttpGet("GetAuthorWebsite")]
         [Route("website")]
-        public string GetAuthorWebsite()
+        public string? GetAuthorWebsite()
         {
             return Author?.Website ?? DefaultAuthor.Website;
         }
@@ -182,9 +181,20 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         /// <returns>The author's code repository</returns>
         [HttpGet("GetAuthorRepository")]
         [Route("repo")]
-        public string GetAuthorRepository()
+        public string? GetAuthorRepository()
         {
             return Author?.Repository ?? DefaultAuthor.Repository;
+        }
+
+        /// <summary>
+        /// Return the author's code repository
+        /// </summary>
+        /// <returns>The author's code repository</returns>
+        [HttpGet("GetAspNetCoreVersion")]
+        [Route("aspnetVersion")]
+        public string GetAspNetCoreVersion()
+        {
+            return System.Environment.Version.ToString();
         }
     }
 
@@ -259,23 +269,6 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         public bool HasValidIncome()
         {
             var anyValidYear = company.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => u.Frame.Length > 2 && int.TryParse(u.Frame.Substring(2), out int year) && year >= 2018 && year <= 2022).Any();
-
-            //var anyFirstYear = company.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => u.Frame.Length > 2 && int.TryParse(u.Frame.Substring(2), out int year) && year > 2018).Any();
-            //var anyLastYear = company.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => u.Frame.Length > 2 && int.TryParse(u.Frame.Substring(2), out int year) && year <= 2022).Any();
-            //bool firstYearValid = false;
-            //bool lastYearValid = false;
-
-            //if (anyFirstYear ?? false)
-            //{
-            //    var min = company.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => u.Frame.Length > 2).Min (u => int.Parse(u.Frame.Substring(2)));
-            //    firstYearValid = min <= 2018;
-            //}
-            //if (anyLastYear ?? false)
-            //{
-            //    var max = company.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => u.Frame.Length > 2).Max(u => int.Parse(u.Frame.Substring(2)));
-            //    lastYearValid = max >= 2022;
-            //}
-            //var validIncome = firstYearValid && lastYearValid;
             return anyValidYear ?? false;
         }
 
