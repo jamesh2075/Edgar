@@ -14,6 +14,7 @@
     <None Remove="TestFiles\10BDecreasedIncome.txt" />
     <None Remove="TestFiles\10BNameStartsWithVowel.json" />
     <None Remove="TestFiles\10BNameStartsWithVowel.txt" />
+    <None Remove="TestFiles\Data.json" />
     <None Remove="TestFiles\DecreasedIncome.json" />
     <None Remove="TestFiles\DecreasedIncome.txt" />
     <None Remove="TestFiles\InvalidIncome.json" />
@@ -35,6 +36,11 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
     <Content Include="TestFiles\10BNameStartsWithVowel.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="TestFiles\Data.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

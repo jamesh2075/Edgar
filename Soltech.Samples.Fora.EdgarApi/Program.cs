@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Routing;
 using Microsoft.OpenApi.Models;
-using Soltech.Samples.Fora.EdgarApi.Controllers;
 using System.Reflection;
+using System.Text.Json;
+
+using Soltech.Samples.Fora.EdgarApi.Controllers;
+using Soltech.Samples.Fora.EdgarData;
 
 // Create an application builder so that additional services can be added
 var builder = WebApplication.CreateBuilder(args);
@@ -44,6 +47,15 @@ builder.Services.AddSwaggerGen((c) =>
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
+
+var dataPath = $@"{builder.Environment.ContentRootPath}\Data.json";
+using (StreamReader reader = new StreamReader(dataPath))
+{
+    var jsonData = reader.ReadToEnd();
+    var edgarList = JsonSerializer.Deserialize<List<EdgarCompanyInfo>>(jsonData);
+    if (edgarList is not null)
+        builder.Services.AddSingleton(edgarList);
+}
 
 // Build the application with all the necessary services added
 var app = builder.Build();

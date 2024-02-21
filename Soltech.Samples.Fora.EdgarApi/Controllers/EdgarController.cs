@@ -14,18 +14,19 @@ using System.Runtime.CompilerServices;
 
 namespace Soltech.Samples.Fora.EdgarApi.Controllers
 {
+    /// <summary>
+    /// Represents the EDGAR API
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class EdgarController : ControllerBase
     {
-        private IWebHostEnvironment environment;
         internal AuthorOptions? Author;
         internal static readonly AuthorOptions DefaultAuthor = new AuthorOptions
         {
             Name = "James Henry",
             Website = "https://www.linkedin.com/in/james-h-2459a92",
             Repository = ""
-
         };
 
         // All the company data, even non-10K data and those that do not follow the CYyyyy format
@@ -40,21 +41,13 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         /// <summary>
         /// Contains actions that return EDGAR data provided by the SEC
         /// </summary>
-        /// <param name="environment"></param>
+        /// <param name="list"></param>
         /// <param name="config"></param>
-        public EdgarController(IWebHostEnvironment environment, IConfiguration config)
+        public EdgarController(List<EdgarCompanyInfo> list, IConfiguration config)
         {
-            this.environment = environment;
-
             Author = config?.GetSection("Author")?.Get<AuthorOptions>();
 
-            var dataPath = $@"{environment.ContentRootPath}\Data.json";
-            using (StreamReader reader = new StreamReader(dataPath))
-            {
-                var jsonData = reader.ReadToEnd();
-                edgarList = JsonSerializer.Deserialize<List<EdgarCompanyInfo>>(jsonData);
-            }
-
+            this.edgarList = list;
             filteredEdgarList = new List<EdgarCompanyInfo>(edgarList);
 
             filteredEdgarList.ForEach(c =>
