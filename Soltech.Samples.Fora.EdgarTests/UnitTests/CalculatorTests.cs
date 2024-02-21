@@ -26,7 +26,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             return company;
         }
 
-        [TestMethod()]
+        [TestMethod("Has Income Between 2018 and 2022")]
         public void HasValidIncomeTest()
         {
             var company = GetCompany("ValidIncome");
@@ -35,7 +35,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.IsTrue(valid);
         }
 
-        [TestMethod()]
+        [TestMethod("Does Not Have Income Between 2018 and 2022")]
         public void HasInvalidIncomeTest()
         {
             EdgarCompanyInfo company = GetCompany("InvalidIncome");
@@ -44,7 +44,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.IsFalse(valid);
         }
 
-        [TestMethod()]
+        [TestMethod("Name Starts with Vowel")]
         public void StartsWithVowelTest()
         {
             EdgarCompanyInfo company = new EdgarCompanyInfo { EntityName = "Aldi" };
@@ -53,7 +53,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
+        [TestMethod("Name Does Not Start with Vowel")]
         public void DoesNotStartWithVowelTest()
         {
             EdgarCompanyInfo company = new EdgarCompanyInfo { EntityName = "Best Buy" };
@@ -62,7 +62,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.IsFalse(result);
         }
 
-        [TestMethod()]
+        [TestMethod("Get Standard Fundable Amount (>= $10 Billion)")]
         public void GetStandardFndableAmountFor10BillionTest()
         {
             EdgarCompanyInfo company = GetCompany("10BNameStartsWithVowel");
@@ -71,7 +71,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.AreEqual(amount, 1233000000m);
         }
 
-        [TestMethod()]
+        [TestMethod("Get Standard Fundable Amount (< $10 Billion)")]
         public void GetStandardFndableAmountForLessThan10BillionTest()
         {
             EdgarCompanyInfo company = GetCompany("NameStartsWithVowel");
@@ -80,7 +80,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.AreEqual(amount, 21500m);
         }
 
-        [TestMethod()]
+        [TestMethod("Get Special Fundable Amount (>= $10 Billion, Name starts with Vowel)")]
         public void GetSpecialFundableAmountFor10BillionVowelTest()
         {
             EdgarCompanyInfo company = GetCompany("10BNameStartsWithVowel");
@@ -89,7 +89,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.AreEqual(amount, 1417950000m);
         }
 
-        [TestMethod()]
+        [TestMethod("Get Special Fundable Amount (>= $10 Billion, Name does not start with Vowel)")]
         public void GetSpecialFundableAmountFor10BillionNoVowelTest()
         {
             EdgarCompanyInfo company = GetCompany("10BDecreasedIncome");
@@ -98,7 +98,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.AreEqual(amount, 924750000m);
         }
 
-        [TestMethod()]
+        [TestMethod("Get Special Fundable Amount (< $10 Billion, Name starts with Vowel)")]
         public void GetSpecialFundableAmountForLessThan10BillionVowelTest()
         {
             EdgarCompanyInfo company = GetCompany("NameStartsWithVowel");
@@ -107,7 +107,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.AreEqual(amount, 24725m);
         }
 
-        [TestMethod()]
+        [TestMethod("Get Special Fundable Amount (< $10 Billion, Name does not start with Vowel")]
         public void GetSpecialFundableAmountForLessThan10BillionNoVowelTest()
         {
             EdgarCompanyInfo company = GetCompany("DecreasedIncome");
@@ -116,7 +116,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.AreEqual(amount, 16125m);
         }
 
-        [TestMethod()]
+        [TestMethod("Get 2021 Income")]
         public void Get2021IncomeTest()
         {
             EdgarCompanyInfo company = GetCompany("DecreasedIncome");
@@ -125,7 +125,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.AreEqual(amount, 100000m);
         }
 
-        [TestMethod()]
+        [TestMethod("Get 2022 Income")]
         public void Get2022IncomeTest()
         {
             EdgarCompanyInfo company = GetCompany("DecreasedIncome");
@@ -134,7 +134,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.AreEqual(amount, 10000m);
         }
 
-        [TestMethod()]
+        [TestMethod("Has Positive Income in 2021 and 2022")]
         public void HasPositiveIncome()
         {
             EdgarCompanyInfo company = GetCompany("PositiveIncome");
@@ -143,7 +143,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Tests
             Assert.IsTrue(result);
         }
 
-        [TestMethod()]
+        [TestMethod("Has Negative Income in 2021 or 2022")]
         public void HasNegativeIncome()
         {
             EdgarCompanyInfo company = GetCompany("NegativeIncome");
