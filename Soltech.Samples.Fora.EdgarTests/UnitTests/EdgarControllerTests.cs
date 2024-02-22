@@ -24,9 +24,10 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
             // Generate fake Configuration settings
             var testConfiguration = new Dictionary<string, string>
             {
-                { "Author:Name", "Test Author" },
-                { "Author:Repository","Test Repo" },
-                { "Author:Website","Test Website" },
+                { "Project:Author", "Test Author" },
+                { "Project:Repository","Test Repo" },
+                { "Project:Pipeline","Test Pipeline" },
+                { "Project:Bio","Test Website" },
             };
 
             // Build the Configuration
@@ -45,7 +46,7 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
             }
         }
 
-        [TestMethod()]
+        [TestMethod("Get JSON Data")]
         public void GetJsonTest()
         {
             var result = controller.GetJson();
@@ -54,7 +55,7 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
             Assert.IsInstanceOfType(result.Value, typeof(List<EdgarCompanyInfo>));
         }
 
-        [TestMethod()]
+        [TestMethod("Get All Companies")]
         public void GetAllCompaniesTest()
         {
             var allCompanies = controller.GetAllCompanies();
@@ -62,7 +63,7 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
             Assert.AreEqual(allCompanies.Count(), 91);
         }
 
-        [TestMethod()]
+        [TestMethod("Get Companies by Name")]
         [DataRow("L")]
         [DataRow("l")]
         [DataRow("LU")]
@@ -79,25 +80,31 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
             Assert.AreEqual(firstOne.Name, companyName);
         }
 
-        [TestMethod()]
+        [TestMethod("Get Author of the Project")]
         public void GetAuthorTest()
         {
             Assert.AreEqual(controller.GetAuthor(), "Test Author");
         }
 
-        [TestMethod()]
-        public void GetAuthorWebsiteTest()
+        [TestMethod("Get Author Bio Website")]
+        public void GetAuthorBioWebsiteTest()
         {
-            Assert.AreEqual(controller.GetAuthorWebsite(), "Test Website");
+            Assert.AreEqual(controller.GetBioWebsite(), "Test Website");
         }
 
-        [TestMethod()]
-        public void GetAuthorRepositoryTest()
+        [TestMethod("Get Code Repository")]
+        public void GetRepositoryTest()
         {
-            Assert.AreEqual(controller.GetAuthorRepository(), "Test Repo");
+            Assert.AreEqual(controller.GetRepository(), "Test Repo");
         }
 
-        [TestMethod()]
+        [TestMethod("Get Build Pipeline")]
+        public void GetPipelineTest()
+        {
+            Assert.AreEqual(controller.GetPipeline(), "Test Pipeline");
+        }
+
+        [TestMethod("Get ASP.NET Core Version")]
         public void GetAspNetCoreVersionTest()
         {
             Assert.AreEqual(controller.GetAspNetCoreVersion(), System.Environment.Version.ToString());
