@@ -33,7 +33,7 @@ async Task DownloadFiles(string format)
     {
         List<EdgarCompanyInfo> list = new List<EdgarCompanyInfo>();
 
-        string columns = sr.ReadLine();
+        string? columns = sr.ReadLine();
         while (columns != null)
         {
             string[] ciks = columns.Split(",");

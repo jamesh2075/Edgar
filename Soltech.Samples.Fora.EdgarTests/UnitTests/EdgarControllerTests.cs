@@ -28,7 +28,7 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
                 { "Project:Repository","Test Repo" },
                 { "Project:Pipeline","Test Pipeline" },
                 { "Project:Bio","Test Website" },
-            };
+            } as IEnumerable<KeyValuePair<string, string?>>;
 
             // Build the Configuration
             var config = new ConfigurationBuilder()
@@ -42,14 +42,15 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
             {
                 var jsonData = reader.ReadToEnd();
                 var edgarList = JsonSerializer.Deserialize<List<EdgarCompanyInfo>>(jsonData);
-                controller = new EdgarController(edgarList, config);
+                if (edgarList is not null)
+                    controller = new EdgarController(edgarList, config);
             }
         }
 
         [TestMethod("Get JSON Data")]
         public void GetJsonTest()
         {
-            var result = controller.GetJson();
+            var result = controller?.GetJson();
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.Value);
             Assert.IsInstanceOfType(result.Value, typeof(List<EdgarCompanyInfo>));
@@ -58,7 +59,7 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
         [TestMethod("Get All Companies")]
         public void GetAllCompaniesTest()
         {
-            var allCompanies = controller.GetAllCompanies();
+            var allCompanies = controller?.GetAllCompanies();
             Assert.IsNotNull(allCompanies);
             Assert.AreEqual(allCompanies.Count(), 91);
         }
@@ -73,7 +74,7 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
         public void GetCompaniesByNameTest(string company)
         {
             const string companyName = "Lumen Technologies, Inc.";
-            var companies = controller.GetCompaniesByName(company);
+            var companies = controller?.GetCompaniesByName(company);
             Assert.IsNotNull(companies);
             Assert.IsTrue(companies.Count() > 0);
             var firstOne = companies.First();
@@ -83,31 +84,31 @@ namespace Soltech.Samples.Fora.EdgarTests.UnitTests
         [TestMethod("Get Author of the Project")]
         public void GetAuthorTest()
         {
-            Assert.AreEqual(controller.GetAuthor(), "Test Author");
+            Assert.AreEqual(controller?.GetAuthor(), "Test Author");
         }
 
         [TestMethod("Get Author Bio Website")]
         public void GetAuthorBioWebsiteTest()
         {
-            Assert.AreEqual(controller.GetBioWebsite(), "Test Website");
+            Assert.AreEqual(controller?.GetBioWebsite(), "Test Website");
         }
 
         [TestMethod("Get Code Repository")]
         public void GetRepositoryTest()
         {
-            Assert.AreEqual(controller.GetRepository(), "Test Repo");
+            Assert.AreEqual(controller?.GetRepository(), "Test Repo");
         }
 
         [TestMethod("Get Build Pipeline")]
         public void GetPipelineTest()
         {
-            Assert.AreEqual(controller.GetPipeline(), "Test Pipeline");
+            Assert.AreEqual(controller?.GetPipeline(), "Test Pipeline");
         }
 
         [TestMethod("Get ASP.NET Core Version")]
         public void GetAspNetCoreVersionTest()
         {
-            Assert.AreEqual(controller.GetAspNetCoreVersion(), System.Environment.Version.ToString());
+            Assert.AreEqual(controller?.GetAspNetCoreVersion(), System.Environment.Version.ToString());
         }
     }
 }
