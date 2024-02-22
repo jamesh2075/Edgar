@@ -21,11 +21,11 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
     [ApiController]
     public class EdgarController : ControllerBase
     {
-        internal AuthorOptions? Author;
-        internal static readonly AuthorOptions DefaultAuthor = new AuthorOptions
+        internal ProjectOptions? ProjectOptions;
+        internal static readonly ProjectOptions DefaultProjectOptions = new ProjectOptions
         {
-            Name = "James Henry",
-            Website = "https://www.linkedin.com/in/james-h-2459a92",
+            Author = "James Henry",
+            Bio = "https://www.linkedin.com/in/james-h-2459a92",
             Repository = ""
         };
 
@@ -45,7 +45,7 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         /// <param name="config"></param>
         public EdgarController(List<EdgarCompanyInfo> list, IConfiguration config)
         {
-            Author = config?.GetSection("Author")?.Get<AuthorOptions>();
+            ProjectOptions = config?.GetSection(ProjectOptions.SectionName)?.Get<ProjectOptions>();
 
             this.edgarList = list;
             filteredEdgarList = new List<EdgarCompanyInfo>(edgarList);
@@ -154,29 +154,40 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
         [Route("Author")]
         public string? GetAuthor()
         {
-            return Author?.Name ?? DefaultAuthor.Name;
+            return ProjectOptions?.Author ?? DefaultProjectOptions.Author;
         }
 
         /// <summary>
-        /// Return the author's web site
+        /// Return the author's bio web site
         /// </summary>
-        /// <returns>The author's web site</returns>
-        [HttpGet("GetAuthorWebsite")]
+        /// <returns>The author's bio web site</returns>
+        [HttpGet("GetBioWebsite")]
         [Route("website")]
-        public string? GetAuthorWebsite()
+        public string? GetBioWebsite()
         {
-            return Author?.Website ?? DefaultAuthor.Website;
+            return ProjectOptions?.Bio ?? DefaultProjectOptions.Bio;
         }
 
         /// <summary>
-        /// Return the author's code repository
+        /// Return the code repository
         /// </summary>
-        /// <returns>The author's code repository</returns>
-        [HttpGet("GetAuthorRepository")]
+        /// <returns>The code repository</returns>
+        [HttpGet("GetRepository")]
         [Route("repo")]
-        public string? GetAuthorRepository()
+        public string? GetRepository()
         {
-            return Author?.Repository ?? DefaultAuthor.Repository;
+            return ProjectOptions?.Repository ?? DefaultProjectOptions.Repository;
+        }
+
+        /// <summary>
+        /// Return the build pipeline
+        /// </summary>
+        /// <returns>The build pipeline</returns>
+        [HttpGet("GetPipeline")]
+        [Route("pipeline")]
+        public string? GetPipeline()
+        {
+            return ProjectOptions?.Pipeline ?? DefaultProjectOptions.Pipeline;
         }
 
         /// <summary>
@@ -192,23 +203,32 @@ namespace Soltech.Samples.Fora.EdgarApi.Controllers
     }
 
     /// <summary>
-    /// Represents the Author configuration section in appSettings.json "Author":{"Name", ...}
-    /// (or App Settings in Azure or Environment variables)
+    /// Represents the Project configuration section in appSettings.json
+    /// (or App Settings in Azure, or Environment variables on the local development computer)
     /// </summary>
-    internal record AuthorOptions
+    internal record ProjectOptions
     {
+        public const string SectionName = "Project";
         /// <summary>
-        /// My name (may change to my email address)
+        /// The name of the author (currently my name, but could change to my email address)
         /// </summary>
-        public string? Name { get; set; }
+        public string? Author { get; set; }
         /// <summary>
-        /// My website (currently my LinkedIn page, but may change to my business site
+        /// My website (currently my LinkedIn page, but could change to my business site)
         /// </summary>
-        public string? Website { get; set; }
+        public string? Bio { get; set; }
         /// <summary>
-        /// My repository (currently Github, but may change to Azure Repos)
+        /// The project's Wiki page (currently Azure DevOps, but could change to Github)
+        /// </summary>
+        public string? Wiki { get; set; }
+        /// <summary>
+        /// The code's repository (currently Github, but could change to Azure Repos)
         /// </summary>
         public string? Repository { get; set; }
+        /// <summary>
+        /// The code's build pipeline (currently Azure DevOps Pipelines, but could change to Jenkins or Teamcity
+        /// </summary>
+        public string? Pipeline { get; set; }
     }
 
     /// <summary>

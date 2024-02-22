@@ -38,8 +38,8 @@ builder.Services.AddSwaggerGen((c) =>
         Version = "v1",
         Contact = new OpenApiContact()
         {
-            Name = EdgarController.DefaultAuthor.Name,
-            Url = new Uri(EdgarController.DefaultAuthor.Website)
+            Name = EdgarController.DefaultProjectOptions.Author,
+            Url = new Uri(EdgarController.DefaultProjectOptions.Bio)
         }
     });
     c.DocInclusionPredicate((name, api) => api.HttpMethod != null);

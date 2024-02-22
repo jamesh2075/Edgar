@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   public author: string = '';
   public website: string = '';
   public repo: string = '';
+  public pipeline: string = '';
   public aspnetVersion: string = '';
   public rawDataUrl: string = `${environment.apiUrl}/api/edgar/json`;
   public requirementsUrl: string = `${environment.apiUrl}/Fora Coding Challenge v1.1.pdf`;
@@ -39,6 +40,7 @@ export class AppComponent implements OnInit {
     this.getAuthor();
     this.getWebsite();
     this.getRepository();
+    this.getPipeline();
     this.getAspNetCoreVersion();
 
     switch (environment.name.toLowerCase()) {
@@ -106,6 +108,17 @@ export class AppComponent implements OnInit {
     this.http.get(`${environment.apiUrl}/api/edgar/repo`, { responseType: 'text' }).subscribe(
       (result) => {
         this.repo = `${result}`;
+      },
+      (error) => {
+        console.error(error);
+      }
+    )
+  }
+
+  getPipeline() {
+    this.http.get(`${environment.apiUrl}/api/edgar/pipeline`, { responseType: 'text' }).subscribe(
+      (result) => {
+        this.pipeline = `${result}`;
       },
       (error) => {
         console.error(error);
