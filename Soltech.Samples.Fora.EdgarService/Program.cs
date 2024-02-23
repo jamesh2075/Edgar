@@ -17,8 +17,8 @@ using Soltech.Samples.Fora.EdgarData;
 // Retrieve the ASPNETCORE_ENVIRONMENT environment variable.
 // In Visual Studio, this can be set in the Debug properties menu (or launchSettings.json file).
 // In Windows, this can be set in System properties
-// On the command line, this can be set by running dotnet run --environment [environment name]
-// In Azure, this can be set on the Configuration tab of the web app (The default is Production)
+// On the command line, this can be set using: set ASPNETCORE_ENVIRONMENT=[env]
+// In Azure, this can be set on the Configuration tab of the web app
 var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
 // If the ASPNECORE_ENVIRONMENT environment variable is not set, then set it to Development.
