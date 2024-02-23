@@ -82,6 +82,42 @@ export class AppComponent implements OnInit {
     )
   }
 
+  ascending:boolean = false;
+  previousField:string = "";
+
+  sort(field: string) {
+
+    if (field == this.previousField) {
+      this.ascending = !this.ascending; // If the same field is being sorted, reverse the sort
+    }
+    else {
+      this.ascending = true; // Otherwise, sort the field in ascending order
+    }
+
+    this.previousField = field;
+
+    this.companies.sort((a: Company, b: Company) => {
+
+      // Convert the Company instances into regular JavaScript objects
+      // so that their properties can be indexed by name.
+      // This eliminates the need to each field (i.e. a.id, a.name, a.standardFundableAmount...)
+      var objA = JSON.parse(JSON.stringify(a));
+      var objB = JSON.parse(JSON.stringify(b));
+
+      // Create the sort algorithm.
+      // Return 1 if the first item is greater than the second.
+      // Return -1 if the second item is greater than the first.
+      // Return 0 if the two items are equal
+      var greater = this.ascending ? 1 : -1;
+      var lesser = this.ascending ? -1 : 1;
+      var result =
+        objA[field] > objB[field] ? greater :
+          objA[field] < objB[field] ? lesser : 0;
+
+      return result;
+    });
+  }
+
   getAuthor() {
     this.http.get(`${environment.apiUrl}/api/edgar/author`, { responseType: 'text' }).subscribe(
       (result) => {

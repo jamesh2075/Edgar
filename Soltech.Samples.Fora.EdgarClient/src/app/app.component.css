@@ -19,8 +19,27 @@
     
 }
 
+/* Style the container to include relative positioning */
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the search icon */
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
 table {
     table-layout:fixed;
+}
+
+th span {
+  text-decoration-line: underline;
+  cursor: pointer;
 }
 
 tr:nth-child(even) {
