@@ -19,4 +19,7 @@
 
   //    Runs at 9:30 AM every week day
   //    "schedule": "0 30 9 * * 1-5"
+
+  //    Runs at 12:00 AM on the 1st day of every month
+        "schedule": "0 0 0 1 * *"
 }
