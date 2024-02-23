@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Soltech.Samples.Fora.EdgarService": {
+      "commandName": "Project",
+      "commandLineArgs": "--environment Production",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
