@@ -4,11 +4,16 @@
         <name>Soltech.Samples.Fora.EdgarApi</name>
     </assembly>
     <members>
-        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration)">
+        <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController">
+            <summary>
+            Represents the EDGAR API
+            </summary>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.#ctor(System.Collections.Generic.List{Soltech.Samples.Fora.EdgarData.EdgarCompanyInfo},Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             Contains actions that return EDGAR data provided by the SEC
             </summary>
-            <param name="environment"></param>
+            <param name="list"></param>
             <param name="config"></param>
         </member>
         <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetJson">
@@ -39,17 +44,23 @@
             </summary>
             <returns>The author of this API</returns>
         </member>
-        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAuthorWebsite">
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetBioWebsite">
             <summary>
-            Return the author's web site
+            Return the author's bio web site
             </summary>
-            <returns>The author's web site</returns>
+            <returns>The author's bio web site</returns>
         </member>
-        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAuthorRepository">
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetRepository">
             <summary>
-            Return the author's code repository
+            Return the code repository
             </summary>
-            <returns>The author's code repository</returns>
+            <returns>The code repository</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetPipeline">
+            <summary>
+            Return the build pipeline
+            </summary>
+            <returns>The build pipeline</returns>
         </member>
         <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAspNetCoreVersion">
             <summary>
@@ -57,25 +68,35 @@
             </summary>
             <returns>The author's code repository</returns>
         </member>
-        <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.AuthorOptions">
+        <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions">
             <summary>
-            Represents the Author configuration section in appSettings.json "Author":{"Name", ...}
-            (or App Settings in Azure or Environment variables)
+            Represents the Project configuration section in appSettings.json
+            (or App Settings in Azure, or Environment variables on the local development computer)
             </summary>
         </member>
-        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.AuthorOptions.Name">
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Author">
             <summary>
-            My name (may change to my email address)
+            The name of the author (currently my name, but could change to my email address)
             </summary>
         </member>
-        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.AuthorOptions.Website">
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Bio">
             <summary>
-            My website (currently my LinkedIn page, but may change to my business site
+            My website (currently my LinkedIn page, but could change to my business site)
             </summary>
         </member>
-        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.AuthorOptions.Repository">
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Wiki">
             <summary>
-            My repository (currently Github, but may change to Azure Repos)
+            The project's Wiki page (currently Azure DevOps, but could change to Github)
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Repository">
+            <summary>
+            The code's repository (currently Github, but could change to Azure Repos)
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Pipeline">
+            <summary>
+            The code's build pipeline (currently Azure DevOps Pipelines, but could change to Jenkins or Teamcity
             </summary>
         </member>
         <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.Company">

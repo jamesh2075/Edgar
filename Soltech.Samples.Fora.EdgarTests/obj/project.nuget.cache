@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qj2Lq4bSxJeW3ogLmAiUW3Jsbgvhte4U5BRDfNaPzIxic1+jhpbSB1iV/FWQO5hk3zDccyYiA74/Mif9zL5gbw==",
+  "dgSpecHash": "E6nDEKZbuiqNDY4VU+HsyyQ0YflNZw5UGY1rDQ+naZxbpjIzdl8uZJq36Mgl/EiCZtQ8Ru4E/jBJ85aZjjWV4A==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj",
+  "projectFilePath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JamesHenry\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\JamesHenry\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",

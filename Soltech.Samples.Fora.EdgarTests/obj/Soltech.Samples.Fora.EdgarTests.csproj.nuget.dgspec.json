@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj": {}
+    "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj": {
+    "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj",
+        "projectUniqueName": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj",
         "projectName": "Soltech.Samples.Fora.EdgarApi",
-        "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj",
+        "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj",
         "packagesPath": "C:\\Users\\JamesHenry\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\obj\\",
+        "outputPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -35,8 +35,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj": {
-                "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj"
+              "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj": {
+                "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj"
               }
             }
           }
@@ -91,14 +91,14 @@
         }
       }
     },
-    "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj": {
+    "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj",
+        "projectUniqueName": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj",
         "projectName": "Soltech.Samples.Fora.EdgatData",
-        "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj",
+        "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj",
         "packagesPath": "C:\\Users\\JamesHenry\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\obj\\",
+        "outputPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -153,14 +153,14 @@
         }
       }
     },
-    "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj": {
+    "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj",
+        "projectUniqueName": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj",
         "projectName": "Soltech.Samples.Fora.EdgarTests",
-        "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj",
+        "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarTests\\Soltech.Samples.Fora.EdgarTests.csproj",
         "packagesPath": "C:\\Users\\JamesHenry\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarTests\\obj\\",
+        "outputPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -184,11 +184,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj": {
-                "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj"
+              "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj": {
+                "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Soltech.Samples.Fora.EdgarApi.csproj"
               },
-              "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj": {
-                "projectPath": "D:\\Projects\\Fora\\EdgarForaSample\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj"
+              "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj": {
+                "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Soltech.Samples.Fora.EdgatData.csproj"
               }
             }
           }

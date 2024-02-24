@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Soltech.Samples.Fora.EdgarTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d33a506dcf2e7db0ee843610f9194dc6f75543d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0304c02df22eb3a2087017eb5c12386aeedd249")]
 [assembly: System.Reflection.AssemblyProductAttribute("Soltech.Samples.Fora.EdgarTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Soltech.Samples.Fora.EdgarTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
