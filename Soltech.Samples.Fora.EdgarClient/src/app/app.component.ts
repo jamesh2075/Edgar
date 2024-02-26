@@ -110,9 +110,17 @@ export class AppComponent implements OnInit {
       // Return 0 if the two items are equal
       var greater = this.ascending ? 1 : -1;
       var lesser = this.ascending ? -1 : 1;
-      var result =
-        objA[field].toString().toLowerCase() > objB[field].toString().toLowerCase() ? greater :
-          objA[field].toString().toLowerCase() < objB[field].toString().toLowerCase() ? lesser : 0;
+      var result = 0;
+      if (field == "name") {
+        result =
+          objA[field].toLowerCase() > objB[field].toLowerCase() ? greater :
+            objA[field].toLowerCase() < objB[field].toLowerCase() ? lesser : 0;
+      }
+      else {
+        result =
+          objA[field] > objB[field] ? greater :
+            objA[field] < objB[field] ? lesser : 0;
+      }
 
       return result;
     });
