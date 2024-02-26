@@ -37,21 +37,21 @@
 <p *ngIf="!companies"><em>Loading... Please refresh after a few seconds. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
 
 <div class="w3-responsive">
-  <table *ngIf="companies" class="w3-table-all">
+  <table *ngIf="companies" class="w3-table-striped">
     <thead>
       <tr class="w3-theme-dark">
         <th><span (click)="sort('name')">CIK</span></th>
         <th><span (click)="sort('name')">Name</span></th>
-        <th class="w3-right-align"><span (click)="sort('standardFundableAmount')">Standard Fundable Amount</span></th>
-        <th class="w3-right-align"><span (click)="sort('specialFundableAmount')">Special Fundable Amount</span></th>
+        <th><span (click)="sort('standardFundableAmount')">Standard Fundable Amount</span></th>
+        <th><span (click)="sort('specialFundableAmount')">Special Fundable Amount</span></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let company of companies">
         <td>{{ company.id }}</td>
         <td>{{ company.name }}</td>
-        <td class="w3-right-align">{{ company.standardFundableAmount | currency }}</td>
-        <td class="w3-right-align">{{ company.specialFundableAmount | currency }}</td>
+        <td>{{ company.standardFundableAmount | currency }}</td>
+        <td>{{ company.specialFundableAmount | currency }}</td>
       </tr>
     </tbody>
   </table>
