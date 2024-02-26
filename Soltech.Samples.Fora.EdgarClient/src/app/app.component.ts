@@ -111,8 +111,8 @@ export class AppComponent implements OnInit {
       var greater = this.ascending ? 1 : -1;
       var lesser = this.ascending ? -1 : 1;
       var result =
-        objA[field] > objB[field] ? greater :
-          objA[field] < objB[field] ? lesser : 0;
+        objA[field].toLowerCase() > objB[field].toLowerCase() ? greater :
+          objA[field].toLowerCase() < objB[field].toLowerCase() ? lesser : 0;
 
       return result;
     });
