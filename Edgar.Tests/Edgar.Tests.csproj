@@ -133,8 +133,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Soltech.Samples.Fora.EdgarApi\Edgar.Api.csproj" />
-    <ProjectReference Include="..\Soltech.Samples.Fora.EdgarData\Edgar.Data.csproj" />
+    <ProjectReference Include="..\Edgar.Api\Edgar.Api.csproj" />
+    <ProjectReference Include="..\Edgar.Data\Edgar.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -4,77 +4,14 @@
     "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Tests\\Edgar.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Tests\\Edgar.Tests.csproj": {
+    "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\Edgar.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Tests\\Edgar.Tests.csproj",
-        "projectName": "Edgar.Tests",
-        "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Tests\\Edgar.Tests.csproj",
-        "packagesPath": "C:\\Users\\JamesHenry\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Tests\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\JamesHenry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Edgar.Api.csproj": {
-                "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Edgar.Api.csproj"
-              },
-              "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Edgar.Data.csproj": {
-                "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Edgar.Data.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.127\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Edgar.Api.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Edgar.Api.csproj",
+        "projectUniqueName": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\Edgar.Api.csproj",
         "projectName": "Edgar.Api",
-        "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\Edgar.Api.csproj",
+        "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\Edgar.Api.csproj",
         "packagesPath": "C:\\Users\\JamesHenry\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\obj\\",
+        "outputPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -98,8 +35,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Edgar.Data.csproj": {
-                "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Edgar.Data.csproj"
+              "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Data\\Edgar.Data.csproj": {
+                "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Data\\Edgar.Data.csproj"
               }
             }
           }
@@ -154,14 +91,14 @@
         }
       }
     },
-    "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Edgar.Data.csproj": {
+    "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Data\\Edgar.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Edgar.Data.csproj",
+        "projectUniqueName": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Data\\Edgar.Data.csproj",
         "projectName": "Edgar.Data",
-        "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\Edgar.Data.csproj",
+        "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Data\\Edgar.Data.csproj",
         "packagesPath": "C:\\Users\\JamesHenry\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarData\\obj\\",
+        "outputPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -196,6 +133,93 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Tests\\Edgar.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Tests\\Edgar.Tests.csproj",
+        "projectName": "Edgar.Tests",
+        "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Tests\\Edgar.Tests.csproj",
+        "packagesPath": "C:\\Users\\JamesHenry\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\JamesHenry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\Edgar.Api.csproj": {
+                "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\Edgar.Api.csproj"
+              },
+              "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Data\\Edgar.Data.csproj": {
+                "projectPath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Data\\Edgar.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[3.0.4, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.0.4, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

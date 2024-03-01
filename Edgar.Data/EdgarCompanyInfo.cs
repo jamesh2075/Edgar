@@ -5,7 +5,7 @@ using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Soltech.Samples.Fora.EdgarData
+namespace Edgar.Data
 {
     public class EdgarCompanyInfo
     {

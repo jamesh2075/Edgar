@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Edgar.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+682dc122337644414898d0372cd20dcf5328c242")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfe177a89ceccd483d221849b657e688139fbea4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Edgar.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Edgar.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

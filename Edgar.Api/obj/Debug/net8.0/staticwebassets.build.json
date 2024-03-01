@@ -1,27 +1,27 @@
 {
   "Version": 1,
-  "Hash": "TMYUe2pEqyOxsq2lKqZe6lXfPJ4xY5V/KHyRXIK2bQY=",
-  "Source": "Soltech.Samples.Fora.EdgarApi",
-  "BasePath": "_content/Soltech.Samples.Fora.EdgarApi",
+  "Hash": "llCWtHN0LSZcUmQUJmyFKYdqXLxE5Z2P9Yfh0wM4dw4=",
+  "Source": "Edgar.Api",
+  "BasePath": "_content/Edgar.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "Soltech.Samples.Fora.EdgarApi\\wwwroot",
-      "Source": "Soltech.Samples.Fora.EdgarApi",
-      "ContentRoot": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\wwwroot\\",
-      "BasePath": "_content/Soltech.Samples.Fora.EdgarApi",
+      "Name": "Edgar.Api\\wwwroot",
+      "Source": "Edgar.Api",
+      "ContentRoot": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\wwwroot\\",
+      "BasePath": "_content/Edgar.Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\wwwroot\\Fora Coding Challenge v1.1.pdf",
-      "SourceId": "Soltech.Samples.Fora.EdgarApi",
+      "Identity": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\wwwroot\\Fora Coding Challenge v1.1.pdf",
+      "SourceId": "Edgar.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Soltech\\Soltech.Samples\\Soltech.Samples.Fora.EdgarApi\\wwwroot\\",
-      "BasePath": "_content/Soltech.Samples.Fora.EdgarApi",
+      "ContentRoot": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\wwwroot\\",
+      "BasePath": "_content/Edgar.Api",
       "RelativePath": "Fora Coding Challenge v1.1.pdf",
       "AssetKind": "All",
       "AssetMode": "All",

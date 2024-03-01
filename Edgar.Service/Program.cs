@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging.Configuration;
 using Microsoft.Extensions.Logging.Console;
 using Microsoft.Extensions.Options;
 
-using Soltech.Samples.Fora.EdgarData;
+using Edgar.Data;
 
 // Retrieve the ASPNETCORE_ENVIRONMENT environment variable.
 // In Visual Studio, this can be set in the Debug properties menu (or launchSettings.json file).

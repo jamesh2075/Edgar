@@ -1,4 +1,4 @@
-﻿using Soltech.Samples.Fora.EdgarApi.Controllers;
+﻿using Edgar.Api.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using Microsoft.Extensions.Configuration;
-using Soltech.Samples.Fora.EdgarData;
+using Edgar.Data;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Soltech.Samples.Fora.EdgarTests.UnitTests
+namespace Edgar.Api.Tests
 {
     
 

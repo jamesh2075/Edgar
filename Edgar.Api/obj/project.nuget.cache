@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "DwYpoCZ+Z5gFqYgr5ZYtCIDEh00lhffRNLviVH4gJfo6w5GWLDPVfVk/qlU0FCuz7MbIlT1v/eu9V5F49Y/BNA==",
+  "dgSpecHash": "Tk5v5/WsMXnzpS1/TC7WwUA5KvnemU7VUx/Fo7h94ZJyMhflh5YZUVYKt427jId/vYU7qJQNMTZj9CawsvXmNw==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Soltech\\Soltech.Samples\\Edgar.Api\\Edgar.Api.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\JamesHenry\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\JamesHenry\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512",
+    "C:\\Users\\JamesHenry\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\JamesHenry\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\JamesHenry\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

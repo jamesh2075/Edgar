@@ -3,8 +3,8 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.Text.Json;
 
-using Soltech.Samples.Fora.EdgarApi.Controllers;
-using Soltech.Samples.Fora.EdgarData;
+using Edgar.Api.Controllers;
+using Edgar.Data;
 
 // Create an application builder so that additional services can be added
 var builder = WebApplication.CreateBuilder(args);

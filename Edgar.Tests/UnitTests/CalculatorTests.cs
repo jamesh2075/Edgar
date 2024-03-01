@@ -1,16 +1,16 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Soltech.Samples.Fora.EdgarApi.Controllers;
+using Edgar.Api.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Soltech.Samples.Fora.EdgarApi;
-using Soltech.Samples.Fora.EdgarData;
+using Edgar.Api;
+using Edgar.Data;
 using System.Security.AccessControl;
 using System.Text.Json;
 
-namespace Soltech.Samples.Fora.EdgarApi.Tests
+namespace Edgar.Api.Tests
 {
     [TestClass()]
     public class CalculatorTests

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Soltech.Samples.Fora.EdgarApi;
+using Edgar.Api;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
@@ -8,11 +8,11 @@ using System.Security.Cryptography;
 using System.Net.NetworkInformation;
 using Microsoft.AspNetCore.DataProtection.Repositories;
 using Microsoft.Extensions.Configuration;
-using Soltech.Samples.Fora.EdgarData;
+using Edgar.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-namespace Soltech.Samples.Fora.EdgarApi.Controllers
+namespace Edgar.Api.Controllers
 {
     /// <summary>
     /// Represents the EDGAR API

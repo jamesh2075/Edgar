@@ -8,17 +8,17 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Soltech.Samples.Fora.EdgarApi/Soltech.Samples.Fora.EdgarApi.csproj", "Soltech.Samples.Fora.EdgarApi/"]
-RUN dotnet restore "./Soltech.Samples.Fora.EdgarApi/./Soltech.Samples.Fora.EdgarApi.csproj"
+COPY ["Edgar.Api/Edgar.Api.csproj", "Edgar.Api/"]
+RUN dotnet restore "./Edgar.Api/./Edgar.Api.csproj"
 COPY . .
-WORKDIR "/src/Soltech.Samples.Fora.EdgarApi"
-RUN dotnet build "./Soltech.Samples.Fora.EdgarApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/Edgar.Api"
+RUN dotnet build "./Edgar.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Soltech.Samples.Fora.EdgarApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Edgar.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Soltech.Samples.Fora.EdgarApi.dll"]
+ENTRYPOINT ["dotnet", "Edgar.Api.dll"]

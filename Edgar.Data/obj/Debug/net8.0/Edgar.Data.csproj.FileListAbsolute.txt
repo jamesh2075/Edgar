@@ -1,0 +1,12 @@
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\bin\Debug\net8.0\Edgar.Data.deps.json
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\bin\Debug\net8.0\Edgar.Data.dll
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\bin\Debug\net8.0\Edgar.Data.pdb
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\obj\Debug\net8.0\Edgar.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\obj\Debug\net8.0\Edgar.Data.AssemblyInfoInputs.cache
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\obj\Debug\net8.0\Edgar.Data.AssemblyInfo.cs
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\obj\Debug\net8.0\Edgar.Data.csproj.CoreCompileInputs.cache
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\obj\Debug\net8.0\Edgar.Data.sourcelink.json
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\obj\Debug\net8.0\Edgar.Data.dll
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\obj\Debug\net8.0\refint\Edgar.Data.dll
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\obj\Debug\net8.0\Edgar.Data.pdb
+D:\Projects\Soltech\Soltech.Samples\Edgar.Data\obj\Debug\net8.0\ref\Edgar.Data.dll
