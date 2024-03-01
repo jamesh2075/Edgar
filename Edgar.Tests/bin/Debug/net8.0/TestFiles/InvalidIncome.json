@@ -1,0 +1,25 @@
+
+  {
+    "Cik": 100,
+    "EntityName": "Aldi",
+    "Facts": {
+      "us-gaap": {
+        "NetIncomeLoss": {
+          "Units": {
+            "Usd": [
+              {
+                "Form": "10-K",
+                "Frame": "CY2017",
+                "Val": 100000
+              },
+              {
+                "Form": "10-K",
+                "Frame": "CY2023",
+                "Val": 100000
+              }
+            ]
+          }
+        }
+      }
+    }
+  }

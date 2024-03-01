@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Soltech.Samples.Fora.EdgarApi</name>
+    </assembly>
+    <members>
+        <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController">
+            <summary>
+            Represents the EDGAR API
+            </summary>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.#ctor(System.Collections.Generic.List{Soltech.Samples.Fora.EdgarData.EdgarCompanyInfo},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Contains actions that return EDGAR data provided by the SEC
+            </summary>
+            <param name="list"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetJson">
+            <summary>
+            Returns a JavaScript Object Notation (JSON) document representing ALL
+            data retrieved from the SEC for the CIKs listed in the requirements document
+            </summary>
+            <returns>A JSON document</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAllCompanies">
+            <summary>
+            Returns all companies that have valid CY years and 10-K data
+            </summary>
+            <returns>All valid companies</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetCompaniesByName(System.String)">
+            <summary>
+            Returns all companies that start with the specified name,
+            and that have valid CY years and 10-K data
+            </summary>
+            <param name="name">The name to filter</param>
+            <returns>The companies that match the specified name</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAuthor">
+            <summary>
+            Return the author of this API
+            This allows it to be used across multiple places, including Swagger and the Angular UI
+            </summary>
+            <returns>The author of this API</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetBioWebsite">
+            <summary>
+            Return the author's bio web site
+            </summary>
+            <returns>The author's bio web site</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetRepository">
+            <summary>
+            Return the code repository
+            </summary>
+            <returns>The code repository</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetPipeline">
+            <summary>
+            Return the build pipeline
+            </summary>
+            <returns>The build pipeline</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.EdgarController.GetAspNetCoreVersion">
+            <summary>
+            Return the author's code repository
+            </summary>
+            <returns>The author's code repository</returns>
+        </member>
+        <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions">
+            <summary>
+            Represents the Project configuration section in appSettings.json
+            (or App Settings in Azure, or Environment variables on the local development computer)
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Author">
+            <summary>
+            The name of the author (currently my name, but could change to my email address)
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Bio">
+            <summary>
+            My website (currently my LinkedIn page, but could change to my business site)
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Wiki">
+            <summary>
+            The project's Wiki page (currently Azure DevOps, but could change to Github)
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Repository">
+            <summary>
+            The code's repository (currently Github, but could change to Azure Repos)
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.ProjectOptions.Pipeline">
+            <summary>
+            The code's build pipeline (currently Azure DevOps Pipelines, but could change to Jenkins or Teamcity
+            </summary>
+        </member>
+        <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.Company">
+            <summary>
+            Represents a valid EDGAR company: one with a valid CY year and 10-K data
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.Company.Name">
+            <summary>
+            The name of the company
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.Company.Id">
+            <summary>
+            The Central Index Key (CIK) of the company 
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.Company.StandardFundableAmount">
+            <summary>
+            The calculated standard fundable amount
+            </summary>
+        </member>
+        <member name="P:Soltech.Samples.Fora.EdgarApi.Controllers.Company.SpecialFundableAmount">
+            <summary>
+            The calculated special fundable amount
+            </summary>
+        </member>
+        <member name="T:Soltech.Samples.Fora.EdgarApi.Controllers.Calculator">
+            <summary>
+            Performs calculations on EDGAR data
+            </summary>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.Calculator.#ctor(Soltech.Samples.Fora.EdgarData.EdgarCompanyInfo)">
+            <summary>
+            Initializes a new instance with the specified EDGAR company
+            </summary>
+            <param name="company">The EDGAR company</param>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.Calculator.HasValidIncome">
+            <summary>
+            Returns <b>true</b> if there is income between 2018 and 2022;
+            </summary>
+            <returns><b>true</b> if there is income between 2018 and 2022;</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.Calculator.StartsWithVowel">
+            <summary>
+            Returns <b>true</b> if the company name starts with a vowel
+            </summary>
+            <returns><b>true</b> if the company name starts with a vowel</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.Calculator.GetSpecialFundableAmount(System.Decimal,System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            Returns the special fundable amount.
+            </summary>
+            <param name="standardFundableAmount"></param>
+            <param name="income2021">2021 income</param>
+            <param name="income2022">2022 income</param>
+            <returns>The special fundable amount</returns>
+            <remarks>This amount is calculated as follows:
+            If the company name starts with a vowel, then the amount is equal to the standard fundable amount plus 15%.
+            Otherwise, if the 2022 income is less than the 2021 income, the amount is equal to the standard fundable amount minus 25%.
+            </remarks>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.Calculator.GetStandardFndableAmount">
+            <summary>
+            Returns the standard fundable amount.
+            </summary>
+            <returns>The standard fundable amount</returns>
+            <remarks>This amount is calculated as follows:
+            First get the highest income between 2018 and 2022.
+            If the income is greater than $10B, then the standard fundable amount is equal to 12.33% of it.
+            Otherwise, the standard fundable amount is equal to 21.5% of it.
+            </remarks>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.Calculator.HasPositiveIncome">
+            <summary>
+            Returns <b>true</b> 2021 and 2022 income are positive
+            </summary>
+            <returns><b>true</b> if 2021 and 2022 income are positive</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.Calculator.Get2021Income">
+            <summary>
+            Returns the income for 2021.
+            </summary>
+            <returns>The income for 2021</returns>
+        </member>
+        <member name="M:Soltech.Samples.Fora.EdgarApi.Controllers.Calculator.Get2022Income">
+            <summary>
+            Returns the income for 2022
+            </summary>
+            <returns>The income for 2022</returns>
+        </member>
+        <member name="T:CorsOptions">
+            <summary>
+            Represents the custom CORS application configuration section in appSettings.json (or elsewhere)
+            </summary>
+        </member>
+    </members>
+</doc>

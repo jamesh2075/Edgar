@@ -1,0 +1,34 @@
+// Highest income between 2018 and 2022 is $100,000
+// Standard Fundable Amount should be $21,500 (21.5% of highest income since it is less than $10 billion)
+
+// Because the company name starts with a vowel,
+// Special Fundable Amount = $24725 (add 15% to the Standard Fundable Amount)
+{
+  "Cik": 100,
+  "EntityName": "Aldi",
+  "Facts": {
+    "us-gaap": {
+      "NetIncomeLoss": {
+        "Units": {
+          "Usd": [
+            {
+              "Form": "10-K",
+              "Frame": "CY2020",
+              "Val": -100000
+            },
+            {
+              "Form": "10-K",
+              "Frame": "CY2021",
+              "Val": 100000
+            },
+            {
+              "Form": "10-K",
+              "Frame": "CY2022",
+              "Val": 10000
+            }
+          ]
+        }
+      }
+    }
+  }
+}

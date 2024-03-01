@@ -1,0 +1,2 @@
+D:\Projects\Fora\EdgarForaSample\Soltech.Samples.Fora.EdgarClient\obj\Debug\Soltech.Samples.Fora.EdgarClient.esproj.CoreCompileInputs.cache
+D:\Projects\Soltech\Soltech.Samples\Soltech.Samples.Fora.EdgarClient\obj\Debug\Soltech.Samples.Fora.EdgarClient.esproj.CoreCompileInputs.cache

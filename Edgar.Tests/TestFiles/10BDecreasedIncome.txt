@@ -1,0 +1,35 @@
+// Highest income between 2018 and 2022 is $10 billion
+// Standard Fundable Amount should be $1,233,000,000 (12.33% of highest income)
+
+// Because the company name does not start with a vowel,
+// The Special Fundable Amount checks to see whether the 2022 income is less than the 2021 income
+// Because it is, the Special Fundable Amount is $924,750,000 (25% less than Standard Fundable Amount)
+{
+  "Cik": 100,
+  "EntityName": "Best Buy",
+  "Facts": {
+    "us-gaap": {
+      "NetIncomeLoss": {
+        "Units": {
+          "Usd": [
+            {
+              "Form": "10-K",
+              "Frame": "CY2020",
+              "Val": -100000
+            },
+            {
+              "Form": "10-K",
+              "Frame": "CY2021",
+              "Val": 10000000000
+            },
+            {
+              "Form": "10-K",
+              "Frame": "CY2022",
+              "Val": 10000
+            }
+          ]
+        }
+      }
+    }
+  }
+}
