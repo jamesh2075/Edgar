@@ -276,13 +276,15 @@ namespace Edgar.Api.Controllers
         }
 
         /// <summary>
-        /// Returns <b>true</b> if there is income between 2018 and 2022;
+        /// Returns <b>true</b> if there is income for all years between 2018 and 2022;
         /// </summary>
-        /// <returns><b>true</b> if there is income between 2018 and 2022;</returns>
+        /// <returns><b>true</b> if there is income for all years between 2018 and 2022;</returns>
         public bool HasValidIncome()
         {
-            var anyValidYear = company.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => u.Frame.Length > 2 && int.TryParse(u.Frame.Substring(2), out int year) && year >= 2018 && year <= 2022).Any();
-            return anyValidYear ?? false;
+            var usdSortedByYear = company.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.OrderBy(u => u.Frame.Substring(2, 4));
+
+            var incomeDataForValidYears = company.Facts?.UsGaap?.NetIncomeLoss?.Units?.Usd?.Where(u => u.Frame.Length > 2 && int.TryParse(u.Frame.Substring(2), out int year) && year >= 2018 && year <= 2022);
+            return incomeDataForValidYears?.Count() == 5;
         }
 
         /// <summary>
