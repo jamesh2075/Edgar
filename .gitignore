@@ -19,3 +19,7 @@
 /Soltech.Samples.Fora.EdgarTests/obj
 /.vs/Soltech.Samples/v17/.suo
 /TestResults
+/Edgar.Angular/obj/Debug
+/Edgar.React/obj/Debug
+/Edgar.React/node_modules
+/Edgar.React/build
