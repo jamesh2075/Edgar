@@ -86,6 +86,7 @@ export default defineConfig(({ command, mode }) => {
                 key: fs.readFileSync(keyFilePath),
                 cert: fs.readFileSync(certFilePath),
             }
-        }
+        },
+        base: '/Vue/'
     }
 })
