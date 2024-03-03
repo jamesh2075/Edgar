@@ -65,6 +65,7 @@
     }[];
 
     interface Data {
+        baseUrl: string,
         requirementsUrl: string,
         rawDataUrl: string,
         swaggerUrl: string,
@@ -81,15 +82,17 @@
     export default defineComponent({
         data(): Data {
             return {
-                requirementsUrl: 'https://edgarapi.azurewebsites.net/Fora%20Coding%20Challenge%20v1.1.pdf',
-                rawDataUrl: 'https://edgarapi.azurewebsites.net/api/edgar/json',
-                swaggerUrl: 'https://edgarapi.azurewebsites.net/swagger',
+                baseUrl: import.meta.env.VITE_API_URL,
+                requirementsUrl: '',
+                rawDataUrl: '',
+                swaggerUrl: '',
                 copyrightYear: new Date().getFullYear(),
                 author: '',
                 pipeline: '',
                 repo: '',
                 aspnetVersion: '',
-                vueVersion: '3.3.4'
+                vueVersion: '3.3.4',
+                environmentName: ''
             };
         },
         created() {
@@ -111,6 +114,19 @@
                 this.repo = '';
                 this.pipeline = '';
                 this.aspnetVersion = '';
+                this.requirementsUrl = `${this.baseUrl}/Fora%20Coding%20Challenge%20v1.1.pdf`;
+                this.rawDataUrl = `${this.baseUrl}/api/edgar/json`;
+                this.swaggerUrl = `${this.baseUrl}/swagger`;
+
+                const env = import.meta.env.MODE;
+
+                switch (env.toLowerCase()) {
+                    case "development":
+                    case "staging": {
+                        this.environmentName = `- (${env})`;
+                        break;
+                    }
+                }
 
                 fetch('https://edgarapi.azurewebsites.net/api/edgar/aspnetVersion')
                     .then(r => r.text())

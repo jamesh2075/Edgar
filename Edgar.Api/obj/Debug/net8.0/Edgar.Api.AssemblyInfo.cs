@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Edgar.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfe177a89ceccd483d221849b657e688139fbea4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd7d46f14d99812e0d179f3c1beb6d200d4d3722")]
 [assembly: System.Reflection.AssemblyProductAttribute("Edgar.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Edgar.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

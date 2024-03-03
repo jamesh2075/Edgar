@@ -6,6 +6,9 @@
   "homepage": "Vue",
   "scripts": {
     "dev": "vite --mode development",
+    "staging": "vite --mode staging",
+    "build-dev": "vite build --mode development",
+    "build-staging": "vite build --mode staging",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build --mode production",

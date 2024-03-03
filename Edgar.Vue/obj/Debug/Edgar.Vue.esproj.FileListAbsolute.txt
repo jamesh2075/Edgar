@@ -1,0 +1,2 @@
+D:\Projects\Soltech\Soltech.Samples\Edgar.Vue\edgar.vue.client\obj\Debug\Edgar.Vue.esproj.CoreCompileInputs.cache
+D:\Projects\Soltech\Soltech.Samples\Edgar.Vue\obj\Debug\Edgar.Vue.esproj.CoreCompileInputs.cache

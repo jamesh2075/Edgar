@@ -137,9 +137,9 @@
         </member>
         <member name="M:Edgar.Api.Controllers.Calculator.HasValidIncome">
             <summary>
-            Returns <b>true</b> if there is income between 2018 and 2022;
+            Returns <b>true</b> if there is income for all years between 2018 and 2022;
             </summary>
-            <returns><b>true</b> if there is income between 2018 and 2022;</returns>
+            <returns><b>true</b> if there is income for all years between 2018 and 2022;</returns>
         </member>
         <member name="M:Edgar.Api.Controllers.Calculator.StartsWithVowel">
             <summary>
