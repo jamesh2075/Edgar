@@ -5,8 +5,8 @@ const rawDataUrl: string = `${process.env.REACT_APP_API_URL}/api/edgar/json`;
 const requirementsUrl: string = `${process.env.REACT_APP_API_URL}/Fora Coding Challenge v1.1.pdf`;
 const swaggerUrl: string = `${process.env.REACT_APP_API_URL}/swagger`;
 let environmentName: string = '';
-const copyrightYear: number = 2024;
-const angularVersion: string = '17.2.1';
+let copyrightYear: number = 2024;
+let reactVersion: string = '17.0';
 
 function App() {
 
@@ -44,6 +44,9 @@ function App() {
         setCompanies(companies);
         forceUpdate();
     }
+
+    reactVersion = React.version;
+    copyrightYear = new Date().getFullYear();
 
     // Get All Companies
     useEffect(() => {
@@ -143,7 +146,7 @@ function App() {
 </div >
 
         <footer className="w3-container w3-theme-dark w3-padding-16 w3-center">
-            <h3>Created with ASP.NET Core { aspnetVersion }, Node 18.19.1, and Angular { angularVersion }</h3>
+            <h3>Created with ASP.NET Core { aspnetVersion }, Node 18.19.1, and React { reactVersion }</h3>
             <p className="w3-tiny">&copy; { copyrightYear }. All rights reserved.</p>
         </footer>
     </>
