@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import HelloWorld from './components/HelloWorld.vue'
     import TheWelcome from './components/TheWelcome.vue'
-    import EdgarCompany from './components/EdgarCompany.vue'
+    import EdgarCompanyList from './components/EdgarCompanyList.vue'
 </script>
 
 <template>
@@ -44,7 +44,7 @@
     </header>
 
     <main>
-        <EdgarCompany ref="edgarCompanyComponent"/>
+        <EdgarCompanyList ref="edgarCompanyListComponent" :url="companiesUrl"/>
     </main>
 
     <footer class="w3-container w3-theme-dark w3-padding-16 w3-center">
@@ -69,6 +69,7 @@
         requirementsUrl: string,
         rawDataUrl: string,
         swaggerUrl: string,
+        companiesUrl: string,
         webSite: string,
         repo: string,
         pipeline: string,
@@ -86,6 +87,7 @@
                 requirementsUrl: '',
                 rawDataUrl: '',
                 swaggerUrl: '',
+                companiesUrl: '',
                 copyrightYear: new Date().getFullYear(),
                 author: '',
                 pipeline: '',
@@ -106,17 +108,18 @@
         },
         methods: {
             filter(name: string): void {
-                this.$refs.edgarCompanyComponent.filter(name);
+                this.$refs.edgarCompanyListComponent.filter(name);
             },
             fetchData(): void {
-                this.author = '';
+                this.author = `Is ${this.baseUrl} running??`;
                 this.webSite = '';
                 this.repo = '';
                 this.pipeline = '';
-                this.aspnetVersion = '';
+                this.aspnetVersion = '`Is ${this.baseUrl} running??`';
                 this.requirementsUrl = `${this.baseUrl}/Fora%20Coding%20Challenge%20v1.1.pdf`;
                 this.rawDataUrl = `${this.baseUrl}/api/edgar/json`;
                 this.swaggerUrl = `${this.baseUrl}/swagger`;
+                this.companiesUrl = `${this.baseUrl}/api/edgar/companies`;
 
                 const env = import.meta.env.MODE;
 
@@ -128,35 +131,35 @@
                     }
                 }
 
-                fetch('https://edgarapi.azurewebsites.net/api/edgar/aspnetVersion')
+                fetch(`${this.baseUrl}/api/edgar/aspnetVersion`)
                     .then(r => r.text())
                     .then(result => {
                         this.aspnetVersion = result;
                         return;
                     });
 
-                fetch('https://edgarapi.azurewebsites.net/api/edgar/author')
+                fetch(`${this.baseUrl}/api/edgar/author`)
                     .then(r => r.text())
                     .then(result => {
                         this.author = result;
                         return;
                     });
 
-                fetch('https://edgarapi.azurewebsites.net/api/edgar/website')
+                fetch(`${this.baseUrl}/api/edgar/website`)
                     .then(r => r.text())
                     .then(result => {
                         this.webSite = result;
                         return;
                     });
 
-                fetch('https://edgarapi.azurewebsites.net/api/edgar/repo')
+                fetch(`${this.baseUrl}/api/edgar/repo`)
                     .then(r => r.text())
                     .then(result => {
                         this.repo = result;
                         return;
                     });
 
-                fetch('https://edgarapi.azurewebsites.net/api/edgar/pipeline')
+                fetch(`${this.baseUrl}/api/edgar/pipeline`)
                     .then(r => r.text())
                     .then(result => {
                         this.pipeline = result;

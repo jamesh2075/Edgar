@@ -60,18 +60,14 @@
             // call again the method if the route changes
             '$route': 'fetchData'
         },
+        props: ['url'],
         methods: {
             fetchData(): void {
                 this.companies = null;
                 this.loading = true;
 
-                fetch('https://edgarapi.azurewebsites.net/api/edgar/companies')
-                    .then(response => response.json())
-                    .then(json => {
-                        this.companies = json as Companies;
-                        this.loading = false;
-                        return;
-                    }).catch(error => console.log(error));
+                // Retrieve all companies
+                this.filter('');
             },
             sort(field:string): void {
                 if (field === this.previousField) {
@@ -83,7 +79,7 @@
 
                 this.previousField = field;
 
-                this.companies.sort((a: Company, b: Company) => {
+                this.companies?.sort((a: Company, b: Company) => {
 
                     // Convert the Company instances into regular JavaScript objects
                     // so that their properties can be indexed by name.
@@ -116,7 +112,7 @@
             filter(search:string) {
                 let suffix = search === undefined || search.trim() === '' ? '' : `/${search}`;
 
-                let url = `https://edgarapi.azurewebsites.net/api/edgar/companies${suffix}`;
+                let url = `${this.url}${suffix}`;
 
                 fetch(url, { method: 'Get', mode: "cors" })
                     .then(response => response.json())
