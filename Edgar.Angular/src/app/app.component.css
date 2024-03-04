@@ -1,12 +1,15 @@
 :host {
     max-width: 1280px;
-    padding: 2rem;
     text-align: center;
 }
 
 #headingDiv {
     width:100%;
+}
 
+#headingDiv i {
+  padding: 10px;
+  font-size: 36px
 }
 
 #searchInput {

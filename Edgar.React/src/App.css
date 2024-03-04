@@ -8,6 +8,11 @@
   width: 100%;
 }
 
+#headingDiv i {
+    padding: 10px;
+    font-size: 36px
+}
+
 #searchInput {
   width: auto;
   min-width: 300px;
