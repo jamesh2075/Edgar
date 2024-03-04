@@ -108,7 +108,7 @@ function App() {
     <>
             <div id="headingDiv" className="w3-row w3-theme-dark w3-padding-24">
                 <div id="logoDiv" className="w3-col m3 w3-center">
-                    <img src="https://www.sec.gov/files/sec-logo.png" alt="The Securities and Exchange Commission logo" title="The Securities and Exchange Commission logo" />
+                    <img src="https://www.sec.gov/files/sec-logo.png" alt="The Securities and Exchange Commission logo" title="The Securities and Exchange Commission logo" className="w3-card-4" />
                     <p>This is NOT an official SEC app.</p>
                 </div>
                 <div id="brandDiv" className="w3-col m6 w3-center">
@@ -119,7 +119,7 @@ function App() {
                       <div className="w3-col s4"><a target="_blank" rel="noreferrer" title="Test the API" href={swaggerUrl}><i className='fa fa-globe w3-card-4'></i>API</a></div>
         </div >
   </div >
-  <div id="authorDiv" className="w3-col m3">
+  <div id="authorDiv" className="w3-col m3 w3-left">
                   <p>Created by <a target="_blank" rel="noreferrer" title="Get to know the author" href={webSite}>{author}</a></p>
     <p>Clone the <a target="_blank" rel="noreferrer" title="Clone the code" href={repo}>code repository</a></p >
         <p>View the <a target="_blank" rel="noreferrer" title="View the build/release pipeline" href={pipeline}>build/release pipeline</a></p >
