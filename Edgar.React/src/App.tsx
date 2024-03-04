@@ -114,9 +114,9 @@ function App() {
                 <div id="brandDiv" className="w3-col m6 w3-center">
                     <h1 className="w3-xxxlarge">EDGAR Company Funding { environmentName }</h1>
                     <div className="w3-row">
-                        <div className="w3-col s4"><a target="_blank" rel="noreferrer" title="Read the requirements" href={requirementsUrl}>Requirements</a></div>
-                    <div className="w3-col s4"><a target="_blank" rel="noreferrer" title="See the raw data" href={rawDataUrl}>Data</a></div>
-                <div className="w3-col s4"><a target="_blank" rel="noreferrer" title="Test the API" href={swaggerUrl}>API</a></div>
+                      <div className="w3-col s4"><a target="_blank" rel="noreferrer" title="Read the requirements" href={requirementsUrl}><i className='fa fa-book w3-card-4'></i>Requirements</a></div>
+                      <div className="w3-col s4"><a target="_blank" rel="noreferrer" title="See the raw data" href={rawDataUrl}><i className='fa fa-database w3-card-4'></i>Data</a></div>
+                      <div className="w3-col s4"><a target="_blank" rel="noreferrer" title="Test the API" href={swaggerUrl}><i className='fa fa-globe w3-card-4'></i>API</a></div>
         </div >
   </div >
   <div id="authorDiv" className="w3-col m3">

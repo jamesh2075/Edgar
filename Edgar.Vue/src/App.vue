@@ -8,15 +8,15 @@
     <header>
         <div id="headingDiv" class="w3-row w3-theme-dark w3-padding-24">
             <div id="logoDiv" class="w3-col m3 w3-center">
-                <img src="https://www.sec.gov/files/sec-logo.png" alt="The Securities and Exchange Commission logo" title="The Securities and Exchange Commission logo" />
+                <img src="https://www.sec.gov/files/sec-logo.png" alt="The Securities and Exchange Commission logo" title="The Securities and Exchange Commission logo" class="w3-card-4" />
                 <p>This is NOT an official SEC app.</p>
             </div>
             <div id="brandDiv" class="w3-col m6 w3-center">
                 <h1 class="w3-xxxlarge">EDGAR Company Funding {{environmentName}}</h1>
                 <div class="w3-row">
-                    <div class="w3-col s4"><a target="_blank" title="Read the requirements" v-bind:href="requirementsUrl">Requirements</a></div>
-                    <div class="w3-col s4"><a target="_blank" title="See the raw data" v-bind:href="rawDataUrl">Data</a></div>
-                    <div class="w3-col s4"><a target="_blank" title="Test the API" v-bind:href="swaggerUrl">API</a></div>
+                    <div class="w3-col s4"><a target="_blank" title="Read the requirements" v-bind:href="requirementsUrl"><i class='fa fa-book w3-card-4'></i>Requirements</a></div>
+                    <div class="w3-col s4"><a target="_blank" title="See the raw data" v-bind:href="rawDataUrl"><i class='fa fa-database w3-card-4'></i>Data</a></div>
+                    <div class="w3-col s4"><a target="_blank" title="Test the API" v-bind:href="swaggerUrl"><i class='fa fa-globe w3-card-4'></i>API</a></div>
                 </div>
             </div>
             <div id="authorDiv" class="w3-col m3">
@@ -55,8 +55,8 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent, ref } from 'vue';
-
+    import { defineComponent } from 'vue';
+    
     type Forecasts = {
         date: string,
         temperatureC: string,
@@ -170,6 +170,11 @@
 <style scoped>
     #headingDiv {
         width: 100%;
+    }
+
+    #headingDiv i {
+        padding: 10px;
+        font-size: 36px
     }
 
     #searchInput {
