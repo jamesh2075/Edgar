@@ -4,8 +4,7 @@
 
 export const environment = {
   name: "Development",
-  //apiUrl: 'http://localhost:5286'
-  apiUrl: 'https://edgarapi.azurewebsites.net'
+  apiUrl: 'http://localhost:5286'
 };
 
 /*
