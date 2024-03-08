@@ -1,0 +1,48 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Funding Statistics";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="w3-table-striped">
+    <thead>
+        <tr class="w3-theme-dark">
+            <th>Statistic</th>
+            <th>Standard Fundable Amount</th>
+            <th>Special Fundable Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Minimum</td>
+            <td>@Html.DisplayFor(model => model.MinimumStandardFundableAmount)</td>
+            <td>@Html.DisplayFor(model => model.MinimumSpecialFundableAmount)</td>
+        </tr>
+        <tr>
+            <td>Maximum</td>
+            <td>@Html.DisplayFor(model => model.MaximumStandardFundableAmount)</td>
+            <td>@Html.DisplayFor(model => model.MaximumSpecialFundableAmount)</td>
+        </tr>
+        <tr>
+            <td>Median</td>
+            <td>@Html.DisplayFor(model => model.MedianStandardFundableAmount)</td>
+            <td>@Html.DisplayFor(model => model.MedianSpecialFundableAmount)</td>
+        </tr>
+        <tr>
+            <td>Mean/Average</td>
+            <td>@Html.DisplayFor(model => model.AverageStandardFundableAmount)</td>
+            <td>@Html.DisplayFor(model => model.AverageSpecialFundableAmount)</td>
+        </tr>
+        <tr>
+            <td>Mode</td>
+            <td>@Html.DisplayFor(model => model.ModeStandardFundableAmount)</td>
+            <td>@Html.DisplayFor(model => model.ModeSpecialFundableAmount)</td>
+        </tr>
+        <tr>
+            <td>Standard Deviation</td>
+            <td>@Html.DisplayFor(model => model.StandardDeviationStandardFundableAmount)</td>
+            <td>@Html.DisplayFor(model => model.StandardDeviationSpecialFundableAmount)</td>
+        </tr>
+    </tbody>
+</table>

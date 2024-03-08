@@ -1,0 +1,77 @@
+﻿@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment environment
+@inject WebApiProjectSettings settings
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Edgar.Razor.styles.css" asp-append-version="true" />
+    <link rel="icon" type="image/x-icon" href="https://www.sec.gov/favicon.ico">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="headingDiv" class="w3-row w3-theme-dark w3-padding-24">
+            <div id="logoDiv" class="w3-col m3 w3-center">
+                <img src="https://www.sec.gov/files/sec-logo.png" alt="The Securities and Exchange Commission logo" title="The Securities and Exchange Commission logo" class="w3-card-4" />
+                <p>This is NOT an official SEC app.</p>
+            </div>
+            <div id="brandDiv" class="w3-col m6 w3-center">
+                <h1 class="w3-xxxlarge">EDGAR Company Funding @(!environment.IsProduction() ? $" - {environment.EnvironmentName}" : "")</h1>
+                <div class="w3-row">
+                    <div class="w3-col s4"><a target="_blank" title="Read the requirements" href="@settings.RequirementsUrl"><i class='fa fa-book w3-card-4'></i>Requirements</a></div>
+                    <div class="w3-col s4"><a target="_blank" title="See the raw data" href="@settings.RawDataUrl"><i class='fa fa-database w3-card-4'></i>Data</a></div>
+                    <div class="w3-col s4"><a target="_blank" title="Test the API" href="@settings.SwaggerUrl"><i class='fa fa-globe w3-card-4'></i>API</a></div>
+                </div>
+            </div>
+            <div id="authorDiv" class="w3-col m3">
+                <p>Created by <a target="_blank" title="Get to know the author" href="@settings.Bio">@settings.Author</a></p>
+                <p>Clone the <a target="_blank" title="Clone the code" href="@settings.Repository">code repository</a></p>
+                <p>View the <a target="_blank" title="View the build/release pipeline" href="@settings.Pipeline">build/release pipeline</a></p>
+                <p>A sample interview project for Fora Financial (www.forafinancial.com) and Soltech</p>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand w3-xxxlarge" asp-area="" asp-page="/Index"><i class='fa fa-money'></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item w3-margin-24">
+                            <a class="nav-link text-dark w3-xlarge w3-theme w3-button" asp-area="" asp-page="/Index">Company Funding</a>
+                        </li>
+                        <li class="nav-item w3-margin-24">
+                            <a class="nav-link text-dark w3-xlarge w3-button" asp-area="" asp-page="/Stats">Statistics</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="w3-container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="w3-container w3-theme-dark w3-padding-16 w3-center">
+        <h3>Created with ASP.NET Core @settings.AspNetVersion and Razor</h3>
+        <p class="w3-tiny">&copy; @DateTime.Today.Year. All rights reserved.</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

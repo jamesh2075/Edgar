@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "EDGAR Company Funding";
+}
+
+<div class="w3-padding-24 w3-center">
+    <h2>
+        <div class="search-container">
+            <form id="searchForm" name="searchForm" method="get">
+                <input id="searchInput" class="w3-border w3-round-xlarge w3-padding-14" type="text" oninput="document.getElementById('searchForm').submit();" asp-for="SearchString" placeholder="Company" />
+
+            <!-- Search icon -->
+            <div class="search-icon">
+                <i class="fa fa-search"></i>
+            </div>
+            </form>
+        </div>
+    </h2>
+</div>
+
+@{
+    if (Model.Companies == null) {
+        <p><em>Loading... Please refresh after a few seconds. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+    }
+    else {
+        <div class="w3-responsive">
+            <form id="companyForm" name="companyForm" method="post">
+            <table class="w3-table-striped">
+                <thead>
+                    <tr class="w3-theme-dark">
+                        <th><span><a asp-route-search="@Model.SearchString" asp-route-field="Id" asp-route-previousField="@ViewData["PreviousField"]"  asp-route-ascending="@ViewData["Ascending"]"/>CIK</span></th>
+                        <th><span><a asp-route-search="@Model.SearchString" asp-route-field="Name" asp-route-previousField="@ViewData["PreviousField"]" asp-route-ascending="@ViewData["Ascending"]" />Name</span></th>
+                        <th><span><a asp-route-search="@Model.SearchString" asp-route-field="StandardFundableAmount" asp-route-previousField="@ViewData["PreviousField"]" asp-route-ascending="@ViewData["Ascending"]" />Standard Fundable Amount</span></th>
+                        <th><span><a asp-route-search="@Model.SearchString" asp-route-field="SpecialFundableAmount" asp-route-previousField="@ViewData["PreviousField"]" asp-route-ascending="@ViewData["Ascending"]" />Special Fundable Amount</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var company in Model.Companies)
+                        {
+                            <tr>
+                                <td>@company.Id</td>
+                                <td>@company.Name</td>
+                                <td>@company.StandardFundableAmount.ToString("C")</td>
+                                <td>@company.SpecialFundableAmount.ToString("C")</td>
+                            </tr>
+                        }
+                </tbody>
+            </table>
+            </form>
+        </div>
+    }
+}
